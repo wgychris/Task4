@@ -1,0 +1,469 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=320, initial-scale=1, maximum-scale=1, user-scalable=1"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/> 
+
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+		<![endif]-->
+		
+		<script type="text/javascript">
+//<![CDATA[
+window.__CF=window.__CF||{};window.__CF.AJS={"ga_key":{"ua":"UA-714221-40","ga_bs":"2"}};
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+try{if (!window.CloudFlare) { var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/abv=1309062649/"},atok:"770905e162148a8dcbb6f09f4e4d3170",petok:"7cb19fbd3d23a39c94aa3c3d3ffa4faa-1382247914-1800",zone:"mixitup.io",rocket:"0",apps:{"ga_key":{"ua":"UA-714221-40","ga_bs":"2"}}}];CloudFlare.push({"apps":{"ape":"2b3def9dfc1232158f728c91ee043992"}});var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.async=!0;a.src="//ajax.cloudflare.com/cdn-cgi/nexp/abv=3224043168/cloudflare.min.js";b.parentNode.insertBefore(a,b);}}catch(e){};
+//]]>
+</script>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700|Open+Sans:300,600,700' rel='stylesheet' type='text/css'/>
+		
+		<link rel="stylesheet" type="text/css" href="parks.css"/>
+		<link rel="shortcut icon" type="image/x-icon" href="im/favicon.ico"/>
+		
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.sortable.min.js"></script>
+		<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.mixitup.min.js"></script>
+		
+		<!--
+
+		MMMMMMMM   MMMMMMMM   MMMMMMMM    
+		MMMMMMMM   MMMMMMMM   MMMMMMMM    
+		MMMMMMMM   MMMMMMMM   MMMMMMMM    
+		MMMMMMMM   MMMMMMMM   MMMMMMMM    
+		
+		MMMMMMMM   MMMMMMMM   MMMMMMMM    
+		MMMMMMMM   MMMMMMMM   MMMMMMMM    
+		MMMMMMMM   MMMMMMMM   MMMMMMMM    
+		MMMMMMMM   MMMMMMMM   MMMMMMMM    
+		
+		MMMMMMMM   MMMMMMMM   MMMMMMMM    
+		MMMMMMMM   MMMMMMMM   MMMMMMMM    
+		MMMMMMMM   MMMMMMMM   MMMMMMMM    
+		MMMMMMMM   MMMMMMMM   MMMMMMMM     
+
+		NATIONAL PARKS: A MIXITUP DEMO
+		
+		Concept and development by Patrick Kunka
+		Design by Jane Song
+		
+		MixItUp is free for non-commercial and commercial use.
+		Copyright 2013 Barrel LLC.
+		
+		http://mixitup.io
+		http://www.barrelny.com
+		
+		DEMO FEATURES
+		
+		- Switch between grid and list view using the 'toGrid' and 'toList' methods
+		- Use different stylings for grid and list views via the 'gridClass' and 'listClass' options
+		- Sort by name and by area using sort buttons
+		- Complex multi-dimensional checkbox filtering using the 'filter' method and custom click handlers
+		- Fade-in "fail element" when MixItUp's filters return no elements.
+		
+		We hope you find this demo useful and educational,
+		Enjoy!
+		
+		The MixItUp Team
+		
+		-->
+		
+		<script type="text/javascript">
+		
+			/* 
+			*	We would normally recommend that all JavaScript is kept in a seperate .js file,
+			* 	but we have included it in the document head for convenience.
+			*/
+			
+			// NICE IMAGE LOADING
+			
+			/* 
+			*	Not part of MixItUp, but this is a great lightweight way 
+			* 	to gracefully fade-in images with CSS3 after they have loaded
+			*/
+			
+			function imgLoaded(img){	
+				$(img).parent().addClass('loaded');
+			};
+			
+			// ON DOCUMENT READY:
+		
+			$(function(){
+				
+				// INSTANTIATE MIXITUP
+				
+				$('#Parks').mixitup({
+					layoutMode: 'list', // Start in list mode (display: block) by default
+					listClass: 'list', // Container class for when in list mode
+					gridClass: 'grid', // Container class for when in grid mode
+					effects: ['fade','blur'], // List of effects 
+					listEffects: ['fade','rotateX'] // List of effects ONLY for list mode
+				});
+				
+				// HANDLE LAYOUT CHANGES
+				
+				// Bind layout buttons to toList and toGrid methods:
+				
+				$('#ToList').on('click',function(){
+					$('.button').removeClass('active');
+					$(this).addClass('active');
+					$('#Parks').mixitup('toList');
+				});
+
+				$('#ToGrid').on('click',function(){
+					$('.button').removeClass('active');
+					$(this).addClass('active');
+					$('#Parks').mixitup('toGrid');
+				});
+				
+				// HANDLE MULTI-DIMENSIONAL CHECKBOX FILTERING
+				
+				/* 	
+				*	The desired behaviour of multi-dimensional filtering can differ greatly 
+				*	from project to project. MixItUp's built in filter button handlers are best
+				*	suited to simple filter operations, so we will need to build our own handlers
+				*	for this demo to achieve the precise behaviour we need.
+				*/
+				
+				var $filters = $('#Filters').find('li'),
+					dimensions = {
+						region: 'all', // Create string for first dimension
+						recreation: 'all',
+                        recreation1: 'all'						// Create string for second dimension
+					};
+					
+				// Bind checkbox click handlers:
+				
+				$filters.on('click',function(){
+					var $t = $(this),
+						dimension = $t.attr('data-dimension'),
+						filter = $t.attr('data-filter'),
+						filterString = dimensions[dimension];
+						
+					if(filter == 'all'){
+						// If "all"
+						if(!$t.hasClass('active')){
+							// if unchecked, check "all" and uncheck all other active filters
+							$t.addClass('active').siblings().removeClass('active');
+							// Replace entire string with "all"
+							filterString = 'all';	
+						} else {
+							// Uncheck
+							$t.removeClass('active');
+							// Emtpy string
+							filterString = '';
+						}
+					} else {
+						// Else, uncheck "all"
+						$t.siblings('[data-filter="all"]').removeClass('active');
+						// Remove "all" from string
+						filterString = filterString.replace('all','');
+						if(!$t.hasClass('active')){
+							// Check checkbox
+							$t.addClass('active');
+							// Append filter to string
+							filterString = filterString == '' ? filter : filterString+' '+filter;
+						} else {
+							// Uncheck
+							$t.removeClass('active');
+							// Remove filter and preceeding space from string with RegEx
+							var re = new RegExp('(\\s|^)'+filter);
+							filterString = filterString.replace(re,'');
+						};
+					};
+					
+					// Set demension with filterString
+					dimensions[dimension] = filterString;
+					
+					// We now have two strings containing the filter arguments for each dimension:	
+					console.info('dimension 1: '+dimensions.region);
+					console.info('dimension 2: '+dimensions.recreation);
+					console.info('dimension 3: '+dimensions.recreation1);
+					
+					/*
+					*	We then send these strings to MixItUp using the filter method. We can send as
+					*	many dimensions to MixitUp as we need using an array as the second argument
+					*	of the "filter" method. Each dimension must be a space seperated string.
+					*
+					*	In this case, MixItUp will show elements using OR logic within each dimension and
+					*	AND logic between dimensions. At least one dimension must pass for the element to show.
+					*/
+					
+					$('#Parks').mixitup('filter',[dimensions.region, dimensions.recreation, dimensions.recreation1])			
+				});
+
+			});
+		</script>
+		
+		<title>National Parks - A MixItUp Demo</title>
+
+</head>
+	<body>
+	<section>
+		
+		<!-- BEGIN HEADER -->
+		
+		<header class="ns">
+		
+			<div class="wrapper just wf">
+				<a class="ib" target="_top" href="../../home.html">
+					<div id="Logo" class="ib">
+						<ul class="ib anim150 just">
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+					<h1 class="ib"><strong>Headache </strong>: Product Details</h1>
+				</a>
+				<!--<a href="#">
+					<div class="ib anim150 button">Download Demo</div>
+				</a>-->
+			</div>
+		</header>
+		
+		<!-- END HEADER -->
+		
+		<!-- BEGIN DEMO WRAPPER -->
+	
+		<div class="wrapper wf">
+			
+			<!-- BEGIN CONTROLS -->
+			
+			<nav class="controls just">
+				<div class="group" id="Sorts">
+					<div class="button active" id="ToList"><i></i>List View</div>
+					<div class="button" id="ToGrid"><i></i>Grid View</div>
+				</div>
+				<div class="group" id="Filters">
+					<div class="drop_down wf">
+						<span class="anim150">By Brand</span>
+						<ul class="anim250">
+							<li class="active" data-filter="all" data-dimension="region">All</li>
+							<li data-filter="Advil" data-dimension="region">Advil</li>
+							
+							<li data-filter="Bayer" data-dimension="region">Bayer</li>
+							<li data-filter="Benadryl" data-dimension="region">Benadryl</li>
+							<li data-filter="Equate" data-dimension="region">Equate</li>
+
+						</ul>
+					</div>
+					
+					<div class="drop_down wf">
+						<span class="anim150">By Review</span>
+						<ul class="anim250">
+							<li class="active" data-filter="all" data-dimension="recreation">All</li>
+							<li data-filter="One_Star" data-dimension="recreation">One Star</li>
+							<li data-filter="Two_Star" data-dimension="recreation">Two Star</li>
+							<li data-filter="Three_Star" data-dimension="recreation">Three Star</li>
+							<li data-filter="Four_Star" data-dimension="recreation">Four Star</li>
+						</ul>
+					</div>
+					
+					<div class="drop_down wf">
+						<span class="anim150">By Price</span>
+						<ul class="anim250">
+							<li class="active" data-filter="all" data-dimension="recreation1">All</li>
+							<li data-filter="otf" data-dimension="recreation1">$1-$5</li>
+							<li data-filter="ftt" data-dimension="recreation1">$5-$10</li>
+							<li data-filter="ttf" data-dimension="recreation1">$10-$15</li>
+							<li data-filter="fttw" data-dimension="recreation1">$15-$20</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			
+			<!-- END CONTROLS -->
+			
+			<!-- BEGIN PARKS -->
+			
+			<ul id="Parks" class="just">
+				
+				<!-- "TABLE" HEADER CONTAINING SORT BUTTONS (HIDDEN IN GRID MODE)-->
+				
+				<div class="list_header">
+					<div class="meta name active desc" id="SortByName">
+						Name &nbsp;
+						<span class="sort anim150 asc active" data-sort="data-name" data-order="desc"></span>
+						<span class="sort anim150 desc" data-sort="data-name" data-order="asc"></span>	
+					</div>
+					<div class="meta region">Brand</div>
+
+					<div class="meta recreation">Review</div>
+										<div class="meta recreation1">Quantity</div>
+	
+					<div class="meta area" id="SortByArea">
+						Price in $ &nbsp;
+						<span class="sort anim150 asc" data-sort="data-area" data-order="asc"></span>
+						<span class="sort anim150 desc" data-sort="data-area" data-order="desc"></span>
+					</div>
+				</div>
+				
+				<!-- FAIL ELEMENT -->
+				
+				<div class="fail_element anim250">Sorry &mdash; we could not find any parks matching matching these criteria</div>
+				
+				<!-- BEGIN LIST OF PARKS (MANY OF THESE ELEMENTS ARE VISIBLE ONLY IN LIST MODE)-->
+				
+				<li class="mix Advil One_Star otf" data-name="Advil" data-area="1">
+					<div class="meta name">
+						<div class="img_wrapper">
+							<img src="im/advil.jpg" onload="imgLoaded(this)"/>
+						</div>
+						<div class="titles">
+							<h2>Advil</h2>
+							<p><em>Advanced Medicine </em></p>
+						</div>
+					</div>
+					<div class="meta region">
+						<p>Advil</p>
+					</div>
+					<div class="meta recreation">
+						
+						<p>
+							<img src="im/1star.png"/>
+						</p>
+					</div>
+										<div class="meta recreation1">
+						<p>200 mg-50 Tablets</p>
+					</div>
+					<div class="meta area">
+						<h4>$1</h4><p><a title="Click here to buy this Item" target="_top" href="../../cart.html"><img src="im/ac.gif"/></a></p>
+					</div>
+				</li>
+				
+				<li class="mix Bayer Three_Star ftt" data-name="Bayer" data-area="10">
+					<div class="meta name">
+						<div class="img_wrapper">
+							<img src="im/alka-seltzer.jpg" onload="imgLoaded(this)"/>
+						</div>
+						<div class="titles">
+							<h2>Alka</h2>
+							<p><em>Seltzer Plus</em></p>
+						</div>
+					</div>
+					<div class="meta region">
+						<p>Bayer</p>
+					</div>
+					<div class="meta recreation">
+						<p>
+							<img src="im/3star.png"/></p>
+													
+					</div>
+								<div class="meta recreation1">
+						<p>20 Liquid Gels</p>
+					</div>
+					<div class="meta area">
+						<h4>$10</h4><p><a title="Click here to buy this Item" target="_top" href="../../cart.html"><img src="im/ac.gif"/></a></p>
+					</div>
+				</li>
+				<li class="mix Bayer Two_Star otf" data-name="Bayer" data-area="5">
+					<div class="meta name">
+						<div class="img_wrapper">
+							<img src="im/bayer.jpg" onload="imgLoaded(this)"/>
+						</div>
+						<div class="titles">
+							<h2>Bayer</h2>
+							<p><em>Headache Relief</em></p>
+						</div>
+					</div>
+					<div class="meta region">
+						<p>Bayer</p>
+					</div>
+					<div class="meta recreation">
+						<p>
+						<img src="im/2star.png"/>
+							
+						</p></div>
+									<div class="meta recreation1">
+						<p>50 Coated Tablets</p>
+					</div>
+					
+					<div class="meta area">
+						<h4>$5</h4><p><a title="Click here to buy this Item" target="_top" href="../../cart.html"><img src="im/ac.gif"/></a></p>
+					</div>
+				</li>
+				<li class="mix Benadryl Three_Star fttw" data-name="Benadryl" data-area="20">
+					<div class="meta name">
+						<div class="img_wrapper">
+							<img src="im/benadryl.jpg" onload="imgLoaded(this)"/>
+						</div>
+						<div class="titles">
+							<h2>Benadryl</h2>
+							<p><em>Maximum Strength</em></p>
+						</div>
+					</div>
+					<div class="meta region">
+						<p>Benadryl</p>
+					</div>
+					<div class="meta recreation">
+						<p><img src="im/3star.png"/>
+						</p>
+					</div>
+								<div class="meta recreation1">
+						<p>20 Caplets</p>
+					</div>
+					<div class="meta area">
+						<h4>$20</h4><p><a title="Click here to buy this Item" target="_top" href="../../cart.html"><img src="im/ac.gif"/></a></p>
+					</div>
+				</li>
+				<li class="mix Equate Four_Star ttf" data-name="Equate" data-area="15">
+					<div class="meta name">
+						<div class="img_wrapper">
+							<img src="im/equate.jpg" onload="imgLoaded(this)"/>
+						</div>
+						<div class="titles">
+							<h2>Equate</h2>
+							<p><em>Allergy Headache</em></p>
+						</div>
+					</div>
+					<div class="meta region">
+						<p>Equate</p>
+					</div>
+					<div class="meta recreation">
+						
+							<p><img src="im/4star.png"/></p>
+						
+					</div>
+			<div class="meta recreation1">
+						<p>24 Caplets</p>
+					</div>
+					<div class="meta area">
+					<h4>$15</h4><p><a title="Click here to buy this Item" target="_top" href="../../cart.html"><img src="im/ac.gif"/></a></p>
+					</div>
+				</li>
+				
+			
+				
+				<!-- END LIST OF PARKS -->
+				
+			</ul>
+
+		</div>
+		
+		<!-- END DEMO WRAPPER -->
+		
+		</section>
+		
+		<!-- BEGIN FOOTER -->
+	
+		
+		<!-- END FOOTER -->
+		
+		<script>/* CloudFlare analytics upgrade */
+</script>
+		
+	</body>
+</html>

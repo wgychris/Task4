@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Caption Hover Effects - Demo 2</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="cn/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="cn/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="cn/css/component2.css" />
+		<script src="cn/js/modernizr-2.6.2.min.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="ss/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="ss/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="ss/css/icons.css" />
+		<link rel="stylesheet" type="text/css" href="ss/css/component.css" />
+		
+		<style>
+.pixels {
+	font-size:16px;
+	line-height:30px;
+	margin-bottom:20px;
+	padding:20px;
+}
+.point {
+	font-size:12pt;
+	line-height:30px;
+	margin-bottom:20px;
+	padding:20px;
+}
+.em {
+	font-size:1em;
+	margin-bottom:20px;
+	padding:20px;
+}
+.percentage {
+	font-size:100%;
+	margin-bottom:20px;
+	padding:20px;
+}
+.undefined {
+	margin-bottom:20px;
+	padding:20px;
+}
+#changeFont {
+	position:absolute;
+	top:10px;
+	right:10px;
+	padding:5px;
+}
+.increaseFont, .decreaseFont, .resetFont {
+	color:#CCCCCC;
+	font-size:14px;
+	float:left;
+	margin:10px;
+}
+</style>
+<script type="text/javascript" language="javascript" src="jquery-1.2.2.pack.js"></script>
+<script type="text/javascript" language="javascript">
+$(document).ready(function(){
+  // Reset Font Size
+  var originalFontSize = $('html').css('font-size');
+  $(".resetFont").click(function(){
+  $('html').css('font-size', originalFontSize);
+  });
+  // Increase Font Size
+  $(".increaseFont").click(function(){
+  	var currentFontSize = $('html').css('font-size');
+ 	var currentFontSizeNum = parseFloat(currentFontSize, 10);
+    var newFontSize = currentFontSizeNum*1.2;
+	$('html').css('font-size', newFontSize);
+	return false;
+  });
+  // Decrease Font Size
+  $(".decreaseFont").click(function(){
+  	var currentFontSize = $('html').css('font-size');
+ 	var currentFontSizeNum = parseFloat(currentFontSize, 10);
+    var newFontSize = currentFontSizeNum*0.8;
+	$('html').css('font-size', newFontSize);
+	return false;
+  });
+});
+</script>
+    	 	</head>
+	<body>
+	
+	<div class="container demo-2">
+			<!-- Top Navigation -->
+			<div class="codrops-top clearfix">
+				<a class="codrops-icon " href="index.html"><span><img src="upmc.jpg"></span></a>
+			</div>
+			<div id="changeFont">
+<a href="#" title="Increase Font Size" class="increaseFont">Increase</a>
+<a href="#" title="Decrease Font Size" class="decreaseFont">Decrease</a>
+<a href="#" title="Reset Font Size" class="resetFont">Reset</a>
+<link rel="stylesheet" href="login/css/style.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2"></script>
+    <script src="login/js/login.js"></script>
+	
+            <!-- Login Starts Here -->
+			<div id="container1">
+            <div id="loginContainer">
+                <a href="#" id="loginButton"><span>Login</span><em></em></a>
+                <div style="clear:both"></div>
+                <div id="loginBox">                
+                    <form id="loginForm">
+                        <fieldset id="body">
+                            <fieldset>
+                                <label for="email">Email Address</label>
+                                <input type="text" placeholder="Email" name="email" id="email" />
+                            </fieldset>
+                            <fieldset>
+                                <label for="password">Password</label>
+                                <input type="password" placeholder="Password" name="password" id="password" />
+                            </fieldset>
+                            <input type="submit" id="login" value="Sign in" />
+                            <label for="checkbox"><input type="checkbox" id="checkbox" />Remember me</label>
+							<input id = "facebookLogin" title="Login with a Facebook account" type="image" alt="Submit" src="login/facebookLogin.png">
+	<input id = "googleLogin" title="Login with a Google Account" type="image" alt="Submit" src="login/googleLogin.png" >
+
+                        </fieldset>
+                        <span><a title="We will help you retrieve your password" href="#">Forgot your password?</a></span>
+                    </form>
+                </div></div>
+            </div>
+			<div id="container2">
+            <div id="loginContainer1">
+                <a href="#" id="loginButton1"><span>Sign Up</span><em></em></a>
+                <div style="clear:both"></div>
+                <div id="loginBox1">                
+                    <form id="loginForm1">
+                        <fieldset id="body1">
+                            <fieldset>
+
+							 <label for="email"><h3>New to UPMC Pharmacy?</h3></label>
+                                <label for="email">Email Address</label>
+                                <input type="text" placeholder="Email (This will be your UserID)" title="This will be your Username" name="email" id="email1" />
+                            </fieldset>
+                            <fieldset>
+                                <label for="password">Password</label>
+                                <input type="password" placeholder="Password" name="password" id="password1" />
+                            </fieldset>
+                            <input type="submit" id="login1" title="Click here to Register with UPMC pharmacy" value="Sign Up" />
+
+                        </fieldset>
+                    </form>
+                </div></div>
+            </div>
+</div>
+			<header>
+					<iframe src="bn/test.html"
+style="width:1503px; height:200px;color:#429a67;
+border-width:0px;
+border-color:#990033; 
+border-style:solid;"
+scrolling="no" >
+</iframe>
+     		</header>
+			
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+<link rel='stylesheet' type='text/css' href='ms/styles.css' />
+<div class = 'left-tab'>
+<div id='cssmenu'> <!--just cut this div and place to your desired place-->
+<ul>
+   <li class='has-sub'><a href='shop_otc.html'><span>OTC</span></a> <!--if bar has no fly-out menu, class will be 'active'. otherwise it will be 'has-sub'-->
+	  <ul>
+		<li class='active'><a href = 'shop_otc.html'><span>General Wellness</span></a></li> <!--if you want to add more options in drop-down just copy this line -->
+		<li class='active'><a href = 'shop_otc.html'><span>Personal Care</span></a></li>
+		<li class='active'><a href = 'shop_otc.html'><span>Diet &amp Nutrition</span></a></li>
+		<li class='active'><a href = 'shop_otc.html'><span>Baby Care</span></a></li>
+	  </ul>
+   </li>
+   <li class='has-sub'><a href='shop_prescription.html'><span>Prescription</span></a>
+      <ul>
+	           <li class='active'><a href='shop_prescription.html'><span>Shop Prescription Drugs</span></a></li>
+         <li class='has-sub'><a href='prescription_history.html'><span>Prescription History</span></a>
+            <ul>
+               <li><a href='prescription_history.html'><span>Get Refill</span></a></li>
+               <li class='last'><a href='prescription_history.html'><span>Browse All</span></a></li>
+            </ul>
+         </li>
+         <li class='active'><a href='prescription_history.html'><span>Add Prescription</span></a></li>
+		 <li class='active'><a href='prescription_history.html'><span>Print Prescription</span></a></li>
+      </ul>
+   </li>
+   <li class='has-sub'><a href='deals.html'><span>Deals</span></a>
+	  <ul>
+		<li class='active'><a href = 'deals.html'><span>Deal of the Day</span></a></li> <!--if you want to add more options in drop-down just copy this line -->
+		<li class='active'><a href = 'deals.html'><span>Deal of the Week</span></a></li>
+		<li class='active'><a href = 'deals.html'><span>Deal of the Month</span></a></li>
+		<li class='active'><a href = 'deals.html'><span>Promotional Offer</span></a></li>
+	  </ul>
+   </li>
+   <li class = 'active'><a href='#'><span>Full Store Directory</span></a></li> <!--this bar has no fly-out menu-->
+
+</ul>
+</div>
+</div>
+			<ul class="grid cs-style-2">
+			
+			<section class="col-2 ss-style-halfcircle">
+						<iframe src="table/examples/basic_init/test.html"
+style="width:1103px; height:650px;color:#429a67;
+border-width:0px;
+border-color:#990033; 
+border-style:solid;"
+scrolling="no" >
+</iframe>
+				</section>
+			</ul>
+	<center><a href="sitemap.html">Sitemap</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="help.html">Contact Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+© 2013-2020 UPMC Corp. All rights reserved.
+			</div><!-- /container -->
+		<script src="js/toucheffects.js"></script>
+
+	</body>
+</html>
