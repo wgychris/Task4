@@ -1,0 +1,231 @@
+.slidingDiv {
+    height:150px;
+    border-bottom:5px solid #3399FF;
+}
+ 
+.show_hide {
+    display:none;
+}
+
+#help_grid {
+	width: 630px;
+	padding: 10px 10px 10px 10px;
+	margin: 0px 30px;
+	list-style: none;
+	float:left;
+}
+#help_grid ul {
+	display: inline-block;
+	width: 620px;
+	margin: 0;
+	padding: 0px;
+	text-align: left;
+	float:left;
+}
+#help_grid li {
+	display: inline-block;
+	width: 610px;
+	margin: 0;
+	text-align: left;
+	float:left;
+}
+#help_container { padding: 0; margin-bottom: 40px }
+
+.col { float: left; margin: 0 25px 25px 0 }
+.no_margin_right { margin-right: 0 }
+.one_third { width: 250px }
+.help_wrapper { 
+	width: 960px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+
+.clear { clear: both; display: block; }
+.h10 { height: 10px }
+.h20 { height: 20px }
+.h40 { height: 40px }
+
+.search_input_field { width: 400px; padding: 5px; color: #808b98;  background: #fff; border: 1px solid #E3CEF6; }
+
+.submit_btn {
+	display: block;
+	line-height: 30px;
+	padding: 0 8px;
+	width: 100px;
+	height: 35px;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	background-color: #524239;
+	border: 1px solid #2f2f2f;
+	color: #fff;
+	font-size:11px;
+	cursor: pointer
+}
+
+.well {
+  min-height: 20px;
+  padding: 20px;
+  margin-bottom: 10px;
+  background-color: #E2CFE0;
+  border: 1px solid #e3e3e3;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.well_tr_slice{
+	clear: both;
+	margin-bottom: 20px;
+	padding-top: 5px;
+	padding-bottom: 20px;
+	border-bottom: 1px dashed white;
+}
+
+.well_td_right{
+	Width: 500px;
+	Padding: 20px 40px;
+}
+
+.well_td_left{
+	Width: 200px;
+}
+
+.well blockquote {
+  border-color: #ddd;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+.sd_box {
+	clear: both;
+	margin-bottom: 20px;
+	padding-top: 5px;
+	padding-bottom: 20px;
+	border-bottom: 1px dashed white;
+}
+
+#cart_grid {
+	width: 850px;
+	padding: 10px 10px 10px 10px;
+	margin: 0px 30px;
+	list-style: none;
+	float:left;
+}
+#cart_grid ul {
+	display: inline-block;
+	width: 840px;
+	margin: 0;
+	padding: 0px;
+	text-align: left;
+	float:left;
+}
+#cart_grid li {
+	display: inline-block;
+	width: 830px;
+	margin: 0;
+	text-align: left;
+	float:left;
+}
+#cart_container { padding: 0; margin-bottom: 40px }
+
+/********************* check out code **************************/
+
+div#checkOutHolder {
+	position: relative;
+	top: -130px;
+	left: 220px;
+	display: none;
+	z-index: 200
+}
+
+div#checkOutContainer {
+	padding: 0px 10px;
+	position: absolute;
+	background-color: #FFFFFF;
+	border: 7px solid #999999;
+	width: 580px;
+}
+
+div#checkOutContainer div#btnClose {
+	text-align: right;
+	width: 100%;
+	position: absolute;
+	top: -20px;
+	left: 20px
+}
+
+div#checkOutContainer div#btnClose img {
+	cursor: pointer
+}
+
+div#checkOutContainer div#checkOutContainerSub {
+	background-color: #FFFFFF;
+}
+
+div#checkOutStepContainer {
+	padding: 0px 5px;
+	width: 515px;
+	background-color: #FFFFFF;
+}
+
+div#checkOutStepContainer div#stepTitle {
+	width: 480px;
+	height: 46px;
+	margin-bottom: 20px
+}
+
+div#checkOutStepContainer div#stepTitle table {
+	width: 100%;
+}
+
+div#checkOutStepContainer div#stepTitle table td {
+	width: 25%;
+	padding: 5px 0px 5px 15px;
+}
+
+div#checkOutStepContainer div#stepTitle table td.current {
+	color: #FFFFFF
+}
+
+div#checkOutStepContainer div#stepTitle table td.next {
+	color: #FFFFFF
+}
+
+div#checkOutStepContainer div#stepTitle table td a.past {
+	color: #FFFFFF;
+	font-weight: normal
+}
+
+div#checkOutStepContainer div#stepTitle table td a.past:hover {
+	text-decoration: underline
+}
+
+div#checkOutStepContainer ul {
+	padding: 0px 0 0 0px;
+	margin: 0px;
+	list-style: none;
+	height: 130px;
+	position: relative;
+	display: block
+}
+
+div#checkOutStepContainer ul li {
+	float: left;
+	padding: 5px 5px 0 0px;
+	font-size: 10;
+	color: #999999;
+	display: block
+}
+
+div#checkOutStepContainer .activeAddress {
+	padding: 10px 0px 10px 10px;
+	border: 1px solid #EEEEEE;
+	background-color: #F2F2F2
+}
+
+div#checkOutStepContainer .inactiveAddress {
+	padding: 10px 0px 10px 10px;
+	border: 1px solid #EEEEEE
+}

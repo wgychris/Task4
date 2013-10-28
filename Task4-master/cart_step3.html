@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>UPMC Online Drug Store</title>
+	<link href="css/slidingDiv.css" rel="stylesheet" type="text/css" />
+	<script type = 'text/javascript'>
+		function changeButtonValue(strVal){
+			var btnObj = document.getElementById('buttonNext');
+			btnObj.value = strVal;
+		}
+	</script>
+	
+<style type="text/css"></style></head>
+
+<body>
+	<div id="checkOutStepContainer">
+		<form method="post" action="cart_step4.html">
+			<div id="stepTitle" style="background-image:url(images/prog_step3.jpg)">
+				<table>
+					<tbody><tr>
+						<td>
+							<a href="cart_step1.html" class="past"><strong>Step 1 <br/>Login</strong></a>
+						</td>
+						<td>
+							<a href="cart_step2.html" class="past"><strong>Step 2 <br/>Shipping</strong></a>
+						</td>
+						<td class="current">
+							<strong>Step 3 <br/>Payment</strong>
+						</td>
+						<td class="next">
+							<strong>Step 4 <br/>Confirmation</strong>
+						</td>
+					</tr>
+				</tbody></table>
+			</div>
+			<table width="100%" border="0" cellspacing="3" cellpadding="0">
+				<tbody><tr>
+					<td id="divAddress1" width="41%" valign="top" class="activeAddress">
+						<strong>
+							<input type="radio" name="radAdd" checked="checked" onclick="changeButtonValue('Continue')">
+							Default Payment Option
+						</strong><br><br>
+						Subail Sunny<br>
+						VISA Card 52** *** **** **79<br>
+						Pittsburgh, PA 15217
+					</td>
+					<td id="divAddress2" width="59%" valign="top" class="inactiveAddress">
+						<strong>
+							<input type="radio" name="radAdd" onclick="changeButtonValue('Save & Continue')">
+							Use New Card
+						</strong><br><br>
+						<ul>
+							<li>
+								Name Printed On Card<br>
+								<input name="txtPostal" type="text" id="txtPostal" size="33">
+							</li>
+							<li>
+								Card Type<br>
+								<select name="ddlCountry" id="ddlCountry" style="width:200px">
+									<option>- Select Card -</option>
+									<option>Master Card</option>
+									<option>Visa</option>
+									<option>American Express</option>
+								</select>
+							</li>
+							<li>
+								Card number<br>
+								<input name="txtNumber" type="text" id="txtNumber" size="33">
+							</li>
+							<li>
+								CSV number<br>
+								<input name="txtCity" type="text" id="txtCity" size="15">
+							</li>							
+							<li>
+								Expire date<br>
+								<select>
+									<option>January (01)</option>
+									<option>February (02)</option>
+									<option>March (03)</option>
+									<option>April (04)</option>
+									<option>May (05)</option>
+									<option>June (06)</option>
+									<option>July (07)</option>
+									<option>August (08)</option>
+									<option>September (09)</option>
+									<option>October (10)</option>
+									<option>November (11)</option>
+									<option>December (12)</option>
+								</select>
+								<select>
+									<option>2013</option>
+									<option>2014</option>
+									<option>2015</option>
+									<option>2016</option>
+									<option>2017</option>
+									<option>2018</option>
+									<option>2019</option>
+									<option>2020</option>
+								</select>
+							</li>
+						</ul>
+					</td>
+				</tr>
+			</tbody></table>
+			<div style="text-align:center;">
+				<input name="btnSearch" type="submit" id="buttonNext" value="Continue" style="width:185px">
+			</div>
+		</form>
+	</div>
+
+
+</body>
+</html>

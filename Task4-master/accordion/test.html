@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	  <title>jQuery Easy Accordion Plugin</title>
+	  
+      <!-- Meta -->
+      <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+	  <meta name="author" content="Andrea Cima Serniotti - Madeincima.eu" />
+	  <meta name="description" content="jQuery Easy Accordion Plugin - A highly flexible timed horizontal slider able to show any kind of content" />
+	  <meta name="keywords" content="jQuery, plugin, accordion, slider, slideshow, horizontal, timed, interval" />	  
+      
+      <!-- Scripts -->
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	  <script type="text/javascript" src="scripts/jquery.easyAccordion.js"></script>
+      <script type="text/javascript" src="scripts/utility.js"></script>
+      
+      <style type="text/css">
+		  html{font-size:62.5%}
+		  body{font-size:1.2em;color:#294f88}
+		  .sample{margin:30px;border:1px solid #92cdec;background:#d7e7ff;padding:30px}
+		  h1{margin:0 0 20px 0;padding:0;font-size:2em;}
+		  h2{margin:40px 0 20px 0;padding:0;font-size:1.6em;}
+		  .easy-accordion h2{margin:0px 0 20px 0;padding:0;font-size:1.6em;}
+		  p{font-size:1.2em;line-height:170%;margin-bottom:20px}
+
+      </style>
+      
+</head>
+    
+    <script type="text/javascript">
+        $(document).ready(function(){
+                          
+                          $(".accordion h3:first").addClass("active");
+                          $(".accordion p:not(:first)").hide();
+                          
+                          $(".accordion h3").click(function(){
+                                                   $(this).next("p").slideToggle("slow")
+                                                   .siblings("p:visible").slideUp("slow");
+                                                   $(this).toggleClass("active");
+                                                   $(this).siblings("h3").removeClass("active");
+                                                   });
+                          
+                          });
+        </script>
+    
+    <style type="text/css">
+        body {
+            margin: 10px auto;
+            width: 670px;
+            font: 110%/120% Arial, Helvetica, sans-serif;
+        }
+        .accordion {
+            width: 680px;
+            border-bottom: solid 1px #fff;
+        }
+        .accordion h3 {
+            background: #e9e7e7 url(images/arrow-square.gif) no-repeat right -51px;  /*header bar background*/
+            padding: 7px 15px;
+            margin: 0;
+            font: bold 120%/100% Arial, Helvetica, sans-serif;
+            border: solid 1px #c4c4c4;
+            border-bottom: none;
+            cursor: pointer;
+        }
+        .accordion h3:hover {
+            background-color: #e3e2e2;
+        }
+        .accordion h3.active {
+            background-position: right 5px;
+        }
+        .accordion p {
+            background: #fff; /*description bar background*/
+            margin: 0;
+            padding: 10px 15px 20px;
+            border-left: solid 1px #c4c4c4;
+            border-right: solid 1px #c4c4c4;
+        }
+        </style>
+    </head>
+    
+    <body>
+        
+        <div class="accordion">
+            <h3>Overview</h3>
+            <p>Nothing's stronger, longer lasting, better on your tough aches and pains than Advil. And nothing works on more pains than Advil. In fact, to treat their own aches and pains, the medicine doctors use most is the medicine in Advil.</p>
+            <h3>Ingredients</h3>
+            <p>Active Ingredient (in each Tablet): Ibuprofen (200 mg). Inactive Ingredients: Acetylated Monoglycerides, Beeswax and/or Carnauba Wax, Croscarmellose Sodium, Iron Oxides, Lecithin, Methylparaben, Microcrystalline Cellulose, Pharmaceutical Glaze, Povidone, Propylparaben, Silicon Dioxide, Simethicone.</p>
+            <h3>Directions</h3>
+            <p>Do not take more than directed. The smallest effective dose should be used. Do not take longer than 10 days, unless directed by a doctor (see Warning). Adults and Children 12 Years and Over: Take 1 tablet every other 4 to 6 hours while symptoms persist. If pain or fever does not respond to 1 tablet, 2 tablets may be used.</p>
+            <h3>Warning</h3>
+            <p>Allergy Alert: Ibuprofen may cause a severe allergic reaction especially in people allergic to aspirin. Symptoms may include: hives; shock; facial swelling; skin reddening; asthma (wheezing); rash; blisters. In an allergic reaction occurs, stop use and seek medical help right away. Stomach Bleeding Warning.</p>
+            <h3>Reviews</h3>
+            <p><b>Dan90</b>-Great Pain Reliever-</p><p><img src="images/3star.png" alt="Alt text to go here" /></p>
+            <p><img src="images/4star.png" alt="Alt text to go here" /><b>Joe86</b>-Perfect for Headache -</p>
+            <p><img src="images/2star.png" alt="Alt text to go here" /><b>Per09</b>-Not Powerful Enough-</p>
+        </div>
+        
+    </body>
+</html>
+   <!-- 
+<body>
+
+
+        <div id="accordion-2">
+            <dl>
+                <dt>Overview</dt>
+                <dd><h2>Overview</h2><p>Nothing's stronger, longer lasting, better on your tough aches and pains than Advil®1. And nothing works on more pains than Advil®1. In fact, to treat their own aches and pains, the medicine doctors use most is the medicine in Advil®1.
+
+Advil® tablets, caplets, and gelcaps relieve headaches, backaches, muscle aches.</p></dd>
+                <dt>Ingredients</dt>
+                <dd><h2>Ingredients</h2><p>Active Ingredient (in each Tablet): Ibuprofen (200 mg). Inactive Ingredients: Acetylated Monoglycerides, Beeswax and/or Carnauba Wax, Croscarmellose Sodium, Iron Oxides, Lecithin, Methylparaben, Microcrystalline Cellulose, Pharmaceutical Glaze, Povidone, Propylparaben, Silicon Dioxide, Simethicone. </p></dd>
+                <dt>Directions</dt>
+                <dd><h2>Directions</h2><p>Do not take more than directed. The smallest effective dose should be used. Do not take longer than 10 days, unless directed by a doctor (see Warning). Adults and Children 12 Years and Over: Take 1 tablet every other 4 to 6 hours while symptoms persist. If pain or fever does not respond to 1 tablet, 2 tablets may be used. </p></dd>
+                <dt>Warning</dt>
+                <dd><h2>Warning</h2><p>Allergy Alert: Ibuprofen may cause a severe allergic reaction especially in people allergic to aspirin. Symptoms may include: hives; shock; facial swelling; skin reddening; asthma (wheezing); rash; blisters. In an allergic reaction occurs, stop use and seek medical help right away. Stomach Bleeding Warning.</p></dd>
+			  <dt>Reviews</dt>
+                <dd><p><img src="images/3star.png" alt="Alt text to go here" /><b>Dan90</b>-Great Pain Reliever-</p>
+				<p><img src="images/4star.png" alt="Alt text to go here" /><b>Joe86</b>-Perfect for Headache -</p>
+<p><img src="images/2star.png" alt="Alt text to go here" /><b>Per09</b>-Not Powerful Enough-</p></dd>				
+           </dl>
+        
+       
+
+   		
+    </div>
+    Meta -->
+    
+</body>
+</html>

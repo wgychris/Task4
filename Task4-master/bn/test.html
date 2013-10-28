@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Awesome Bubble Navigation with jQuery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="Awesome Bubble Navigation with jQuery" />
+        <meta name="keywords" content="jquery, circular menu, navigation, round, bubble"/>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+			<link rel="stylesheet" href="../es/css/style.css" type="text/css" media="screen"/>
+        <style>
+            *{
+                padding:0;
+                margin:0;
+            }
+             body{
+                background:transparent url(http://tympanus.net/codrops/wp-content/themes/codropstheme/images/bg_main.png) repeat scroll left top;
+                font-family:"Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;
+
+            }
+            h1{
+                font-size:180px;
+                line-height:180px;
+                text-transform: uppercase;
+                color:#1275AD;
+                position:absolute;
+                text-shadow:0 1px 1px #45A8DF;
+                top:-25px;
+                left:-20px;
+                white-space: nowrap;
+            }
+            span.reference{
+                position:fixed;
+                left:10px;
+                bottom:10px;
+                font-size:11px;
+            }
+            span.reference a{
+                color:#fff;
+                text-decoration:none;
+                text-transform: uppercase;
+                text-shadow:0 1px 0 #000;
+            }
+            span.reference a:hover{
+                color:#f0f0f0;
+            }
+            .box{
+                margin:30px 0px 0px 50px;
+                height:0px;
+                width:5%;
+                position:relative;
+                -moz-box-shadow:0px 0px 5px #444;
+                -webkit-box-shadow:0px 0px 5px #444;
+                box-shadow:0px 0px 5px #444;
+                background:#1783BF url(click.png) no-repeat 380px 80px;
+            }
+            .box h2{
+				background-color:#1275AD;
+				border-color:#0E5A85 #0E5A85 #0E5A85;
+				border-style:ridge ridge solid;
+				border-width:1px;
+				color:#FFFFFF;
+				font-size:22px;
+				padding:10px;
+				text-shadow:1px 1px 1px #000000;
+            }
+
+        </style>		
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            body{
+                font-family:Arial;
+                background:#fff url(images/bg.png) no-repeat top left;
+            }
+            .title{
+                width:548px;
+                height:119px;
+                position:absolute;
+                top:400px;
+                left:150px;
+                background:transparent url(title.png) no-repeat top left;
+            }
+            a.back{
+                background:transparent url(back.png) no-repeat top left;
+                position:fixed;
+                width:150px;
+                height:27px;
+                outline:none;
+                bottom:0px;
+                left:0px;
+            }
+            #content{
+                margin:0 auto;
+				width:100%;
+    min-width:200px;
+            }
+
+
+        </style>
+	
+    </head>
+
+    <body  style="background-color:#E2CFE0; background-repeat:repeat">
+        <div id="content">
+           
+
+            <div class="navigation" id="nav">
+                <div id="duser" class="item user">
+                    <img src="images/bg_user.png" alt="" width="199" height="199" class="circle"/>
+                    <a class="icon"></a>
+                    <h2>My Account</h2>
+                    <ul>
+                        <li><a title="Change Account Settings" target="_top" href="../my_account.html">Profile Settings</a></li>
+                        <li><a title="Order/Shipping Status" target="_top" href="../order_history.html">Order History</a></li>
+                        <li><a title="Previous Prescriptions" target="_top" href="../prescription_history.html">Prescription History</a></li>
+                    </ul>
+                </div>
+                
+                <div id="dshop" class="item shop">
+                    <img src="images/bg_shop.png" alt="" width="199" height="199" class="circle"/>
+                    <a class="icon"></a>
+                    <h2>Shop</h2>
+                    <ul>
+                        <li><a title="Buy Over the Counter Drugs" target="_top" href="../shop_otc.html">OTC</a></li>
+                        <li><a title="Buy Prescription Medicine" target="_top" href="../shop_prescription.html">Prescription</a></li>
+                        <li><a title="Latest Deals & Offers" target="_top" href="../deals.html">Deals & Offers</a></li>
+                    </ul>
+                </div>
+                <div id="dfav" class="item fav">
+                    <img src="images/bg_fav.png" alt="" width="199" height="199" class="circle"/>
+                    <a class="icon"></a>
+                    <h2>Ask a Pharmacist</h2>
+                    <ul>
+                        <li><a title="Contact Us" target="_top" href="../help.html">Customer Service</a></li>
+                        <li><a title="Shipping/Order/Returns/Refunds Queries" target="_top" href="../help.html">Order Support</a></li>
+                        <li><a title="Privacy/Security Concerns?" target="_top" href="../help.html">Security & Privacy</a></li>
+                    </ul>
+                </div>
+				 <div class="item fav1">
+                   
+		
+                </div>
+				
+		<!-- /container -->
+		
+            </div>
+			<div class="box">
+			
+                <form id="ui_element" target="_top" action="../search_result.html" class="sb_wrapper">
+                    <p>
+						<span class="sb_down"></span>
+						<div class="ui-widget">
+	<input id="tags" class="sb_input" type="text"/><input class="sb_search" type="submit" value=""/>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+	 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>    
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script>
+	$(function() {
+		var availableTags = [
+			"Amoxcillin",
+			"Aspirin",
+			"Head ache",
+			"Head ache medicine",
+			"Head ache generic drug",
+			"Pain Relief"
+			
+		];
+		$( "#tags" ).autocomplete({
+			source: availableTags
+		});
+	});
+	</script>
+</div>
+						
+					</p>
+					<ul class="sb_dropdown" style="display:none;">
+						<li class="sb_filter">Filter your search</li>
+						<li><input type="checkbox"/><label for="all"><strong>All Categories</strong></label></li>
+						<li><input type="checkbox"/><label for="Automotive">General Wellness</label></li>
+						<li><input type="checkbox"/><label for="Baby">Baby & Mom</label></li>
+						<li><input type="checkbox"/><label for="Beauty">Diet & Nutrition</label></li>
+						<li><input type="checkbox"/><label for="Books">Personal Care</label></li>
+						<li><input type="checkbox"/><label for="Cell">Sexual Health</label></li>
+											</ul>
+                </form>
+            </div>
+        </div>
+		
+	
+		
+        <!-- The JavaScript -->
+
+        <script type="text/javascript" src="jquery.easing.1.3.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('#nav > div').hover(
+                function () {
+                    var $this = $(this);
+                    $this.find('img').stop().animate({
+                        'width'     :'199px',
+                        'height'    :'199px',
+                        'top'       :'-25px',
+                        'left'      :'-25px',
+                        'opacity'   :'1.0'
+                    },500,'easeOutBack',function(){
+                        $(this).parent().find('ul').fadeIn(700);
+                    });
+
+                    $this.find('a:first,h2').addClass('active');
+                },
+                function () {
+                    var $this = $(this);
+                    $this.find('ul').fadeOut(500);
+                    $this.find('img').stop().animate({
+                        'width'     :'52px',
+                        'height'    :'52px',
+                        'top'       :'0px',
+                        'left'      :'0px',
+                        'opacity'   :'0.1'
+                    },5000,'easeOutBack');
+
+                    $this.find('a:first,h2').removeClass('active');
+                }
+            );
+            });
+        </script>
+		 <script type="text/javascript">
+            $(function() {
+				/**
+				* the element
+				*/
+				var $ui 		= $('#ui_element');
+				
+				/**
+				* on focus and on click display the dropdown, 
+				* and change the arrow image
+				*/
+				$ui.find('.sb_input').bind('focus click',function(){
+					$ui.find('.sb_down')
+					   .addClass('sb_up')
+					   .removeClass('sb_down')
+					   .andSelf()
+					   .find('.sb_dropdown')
+					   .show();
+				});
+				
+				/**
+				* on mouse leave hide the dropdown, 
+				* and change the arrow image
+				*/
+				$ui.bind('mouseleave',function(){
+					$ui.find('.sb_up')
+					   .addClass('sb_down')
+					   .removeClass('sb_up')
+					   .andSelf()
+					   .find('.sb_dropdown')
+					   .hide();
+				});
+				
+				/**
+				* selecting all checkboxes
+				*/
+				$ui.find('.sb_dropdown').find('label[for="all"]').prev().bind('click',function(){
+					$(this).parent().siblings().find(':checkbox').attr('checked',this.checked).attr('disabled',this.checked);
+				});
+            });
+        </script>	
+    </body>
+</html>
