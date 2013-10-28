@@ -1,0 +1,89 @@
+<html>
+<head>
+                    <script type="text/javascript" src="js/jquery-1.4.3.min.js"></script>
+ 
+<style type="text/css">
+	#floating-box{
+		width:90px;
+		height:200px;
+		border:1px solid red;
+		background-color:#BBBBBB;
+		float:left;
+		margin-left:-100px;
+		margin-right:10px;
+		position:absolute;
+		z-index:1;
+	}
+	
+	#body{
+		border:1px solid blue;
+		height:2400px;
+		margin:8px;
+	}
+
+	h1,h2{
+		padding:16px;
+	}
+</style>
+ 
+</head>
+<body>
+ 
+
+
+ 
+	<div id="floating-box">
+ 
+	</div>
+ 
+	<div id="body">
+
+	</div>
+
+ 
+ 
+<script type="text/javascript">
+ 
+    //avoid conflict with other script
+    $j=jQuery.noConflict();
+ 
+    $j(document).ready(function($) {
+ 
+	//this is the floating content
+	var $floatingbox = $('#floating-box');
+ 
+	if($('#body').length > 0){
+ 
+	  var bodyY = parseInt($('#body').offset().top) - 20;
+	  var originalX = $floatingbox.css('margin-left');
+ 
+	  $(window).scroll(function () { 
+ 
+	   var scrollY = $(window).scrollTop();
+	   var isfixed = $floatingbox.css('position') == 'fixed';
+ 
+	   if($floatingbox.length > 0){
+ 
+	     
+	      if ( scrollY > bodyY && !isfixed ) {
+			$floatingbox.stop().css({
+			  position: 'fixed',
+			  left: '50%',
+			  top: 20,
+			  marginLeft: -500
+			});
+		} else if ( scrollY < bodyY && isfixed ) {
+		 	  $floatingbox.css({
+			  position: 'relative',
+			  left: 0,
+			  top: 0,
+			  marginLeft: originalX
+		});
+	     }		
+	   }
+       });
+     }
+  });
+</script>
+</body>
+</html>

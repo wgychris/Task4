@@ -25,7 +25,11 @@ a { text-decoration:none }
     float:right;
     font-size:12px;
 }
-
+#loginContainer2{
+    position:relative;
+    float:right;
+    font-size:12px;
+}
 /* Login Button */
 #loginButton { 
     display:inline-block;

@@ -58,7 +58,6 @@ section{
 
 .wrapper{
 	padding-bottom: 130px;
-	background-color: #E2CFE0;
 }
 
 .clear{
@@ -168,7 +167,7 @@ header h1{
 	vertical-align: top;
 	cursor: pointer;
 	
-	color: black;
+	color: #fff;
 	font-family: 'Open Sans';
 	font-size: 22px;
 	line-height: 30px;
@@ -378,7 +377,6 @@ body{
 
 .drop_down span{
 	position: relative;
-	color: black;
 	padding-right: 20px;
 }
 

@@ -105,3 +105,127 @@
 	padding-bottom: 20px;
 	border-bottom: 1px dashed white;
 }
+
+#cart_grid {
+	width: 850px;
+	padding: 10px 10px 10px 10px;
+	margin: 0px 30px;
+	list-style: none;
+	float:left;
+}
+#cart_grid ul {
+	display: inline-block;
+	width: 840px;
+	margin: 0;
+	padding: 0px;
+	text-align: left;
+	float:left;
+}
+#cart_grid li {
+	display: inline-block;
+	width: 830px;
+	margin: 0;
+	text-align: left;
+	float:left;
+}
+#cart_container { padding: 0; margin-bottom: 40px }
+
+/********************* check out code **************************/
+
+div#checkOutHolder {
+	position: relative;
+	top: -130px;
+	left: 220px;
+	display: none;
+	z-index: 200
+}
+
+div#checkOutContainer {
+	padding: 0px 10px;
+	position: absolute;
+	background-color: #FFFFFF;
+	border: 7px solid #999999;
+	width: 580px;
+}
+
+div#checkOutContainer div#btnClose {
+	text-align: right;
+	width: 100%;
+	position: absolute;
+	top: -20px;
+	left: 20px
+}
+
+div#checkOutContainer div#btnClose img {
+	cursor: pointer
+}
+
+div#checkOutContainer div#checkOutContainerSub {
+	background-color: #FFFFFF;
+}
+
+div#checkOutStepContainer {
+	padding: 0px 5px;
+	width: 515px;
+	background-color: #FFFFFF;
+}
+
+div#checkOutStepContainer div#stepTitle {
+	width: 480px;
+	height: 46px;
+	margin-bottom: 20px
+}
+
+div#checkOutStepContainer div#stepTitle table {
+	width: 100%;
+}
+
+div#checkOutStepContainer div#stepTitle table td {
+	width: 25%;
+	padding: 5px 0px 5px 15px;
+}
+
+div#checkOutStepContainer div#stepTitle table td.current {
+	color: #FFFFFF
+}
+
+div#checkOutStepContainer div#stepTitle table td.next {
+	color: #FFFFFF
+}
+
+div#checkOutStepContainer div#stepTitle table td a.past {
+	color: #FFFFFF;
+	font-weight: normal
+}
+
+div#checkOutStepContainer div#stepTitle table td a.past:hover {
+	text-decoration: underline
+}
+
+div#checkOutStepContainer ul {
+	padding: 0px 0 0 0px;
+	margin: 0px;
+	list-style: none;
+	height: 130px;
+	position: relative;
+	display: block
+}
+
+div#checkOutStepContainer ul li {
+	float: left;
+	padding: 5px 5px 0 0px;
+	font-size: 10;
+	color: #999999;
+	display: block
+}
+
+div#checkOutStepContainer .activeAddress {
+	padding: 10px 0px 10px 10px;
+	border: 1px solid #EEEEEE;
+	background-color: #F2F2F2
+}
+
+div#checkOutStepContainer .inactiveAddress {
+	padding: 10px 0px 10px 10px;
+	border: 1px solid #EEEEEE
+}

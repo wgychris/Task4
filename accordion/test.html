@@ -22,69 +22,82 @@
 		  h2{margin:40px 0 20px 0;padding:0;font-size:1.6em;}
 		  .easy-accordion h2{margin:0px 0 20px 0;padding:0;font-size:1.6em;}
 		  p{font-size:1.2em;line-height:170%;margin-bottom:20px}
-		  		  
-		 
-		/* UNLESS YOU KNOW WHAT YOU'RE DOING, DO NOT CHANGE THE FOLLOWING RULES */
-		
-		.easy-accordion{display:block;position:relative;overflow:hidden;padding:0;margin:0}
-		.easy-accordion dt,.easy-accordion dd{margin:0;padding:0}
-		.easy-accordion dt,.easy-accordion dd{position:absolute}
-		.easy-accordion dt{margin-bottom:0;margin-left:0;z-index:5;/* Safari */ -webkit-transform: rotate(-90deg); /* Firefox */ -moz-transform: rotate(-90deg);-moz-transform-origin: 20px 0px;  /* Internet Explorer */ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);cursor:pointer;}
-		.easy-accordion dd{z-index:1;opacity:0;overflow:hidden}
-		.easy-accordion dd.active{opacity:1;}
-		.easy-accordion dd.no-more-active{z-index:2;opacity:1}
-		.easy-accordion dd.active{z-index:3}
-		.easy-accordion dd.plus{z-index:4}
-		.easy-accordion .slide-number{position:absolute;bottom:0;left:10px;font-weight:normal;font-size:1.1em;/* Safari */ -webkit-transform: rotate(90deg); /* Firefox */ -moz-transform: rotate(90deg);  /* Internet Explorer */ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);}
-		 
-		 
-		/* FEEL FREE TO CUSTOMIZE THE FOLLOWING RULES */
-		
-		dd p{line-height:120%}
-		
-		#accordion-1{width:800px;height:245px;padding:30px;background:#fff;border:1px solid #b5c9e8}
-		#accordion-1 dl{width:800px;height:245px}	
-		#accordion-1 dt{height:46px;line-height:44px;text-align:right;padding:0 15px 0 0;font-size:1.1em;font-weight:bold;font-family: Tahoma, Geneva, sans-serif;text-transform:uppercase;letter-spacing:1px;background:#fff url(images/slide-title-inactive-1.jpg) 0 0 no-repeat;color:#26526c}
-		#accordion-1 dt.active{cursor:pointer;color:#fff;background:#fff url(images/slide-title-active-1.jpg) 0 0 no-repeat}
-		#accordion-1 dt.hover{color:#68889b;}
-		#accordion-1 dt.active.hover{color:#fff}
-		#accordion-1 dd{padding:25px;background:url(images/slide.jpg) bottom left repeat-x;border:1px solid #dbe9ea;border-left:0;margin-right:3px}
-		#accordion-1 .slide-number{color:#68889b;left:10px;font-weight:bold}
-		#accordion-1 .active .slide-number{color:#fff;}
-		#accordion-1 a{color:#68889b}
-		#accordion-1 dd img{float:right;margin:0 0 0 30px;}
-		#accordion-1 h2{font-size:2.5em;margin-top:10px}
-		#accordion-1 .more{padding-top:10px;display:block}
-			
-		#accordion-2{width:500px;height:195px;padding:30px;background:#fff;border:1px solid #b5c9e8}
-		#accordion-2 h2{font-size:2.5em;margin-top:10px}
-		#accordion-2 dl{width:500px;height:195px}	
-		#accordion-2 dt{height:56px;line-height:44px;text-align:right;padding:10px 15px 0 0;font-size:1.1em;font-weight:bold;font-family: Tahoma, Geneva, sans-serif;text-transform:uppercase;letter-spacing:1px;background:#fff url(images/slide-title-inactive-2.jpg) 0 0 no-repeat;color:#26526c}
-		#accordion-2 dt.active{cursor:pointer;color:#fff;background:#fff url(images/slide-title-active-1.jpg) 0 0 no-repeat}
-		#accordion-2 dt.hover{color:#68889b;}
-		#accordion-2 dt.active.hover{color:#fff}
-		#accordion-2 dd{padding:25px;background:url(images/slide.jpg) bottom left repeat-x;border:1px solid #dbe9ea;border-left:0;margin-right:3px}
-		#accordion-2 .slide-number{color:#68889b;left:10px;font-weight:bold}
-		#accordion-2 .active .slide-number{color:#fff}
-		#accordion-2 a{color:#68889b}
-		#accordion-2 dd img{float:right;margin:0 0 0 30px;position:relative;top:-20px}
-
-		#accordion-3{width:700px;height:195px;padding:30px;background:#fff;border:1px solid #b5c9e8}
-		#accordion-3 h2{font-size:2.5em;margin-top:10px}
-		#accordion-3 dl{width:700px;height:195px}	
-		#accordion-3 dt{height:56px;line-height:44px;text-align:right;padding:10px 15px 0 0;font-size:1.1em;font-weight:bold;font-family: Tahoma, Geneva, sans-serif;text-transform:uppercase;letter-spacing:1px;background:#fff url(images/slide-title-inactive-2.jpg) 0 0 no-repeat;color:#26526c}
-		#accordion-3 dt.active{cursor:pointer;color:#fff;background:#fff url(images/slide-title-active-2.jpg) 0 0 no-repeat}
-		#accordion-3 dt.hover{color:#68889b;}
-		#accordion-3 dt.active.hover{color:#fff}
-		#accordion-3 dd{padding:25px;background:url(images/slide.jpg) bottom left repeat-x;border:1px solid #dbe9ea;border-left:0;margin-right:3px}
-		#accordion-3 .slide-number{color:#68889b;left:13px;font-weight:bold}
-		#accordion-3 .active .slide-number{color:#fff}
-		#accordion-3 a{color:#68889b}
-		#accordion-3 dd img{float:right;margin:0 0 0 30px;position:relative;top:-20px}
 
       </style>
       
 </head>
+    
+    <script type="text/javascript">
+        $(document).ready(function(){
+                          
+                          $(".accordion h3:first").addClass("active");
+                          $(".accordion p:not(:first)").hide();
+                          
+                          $(".accordion h3").click(function(){
+                                                   $(this).next("p").slideToggle("slow")
+                                                   .siblings("p:visible").slideUp("slow");
+                                                   $(this).toggleClass("active");
+                                                   $(this).siblings("h3").removeClass("active");
+                                                   });
+                          
+                          });
+        </script>
+    
+    <style type="text/css">
+        body {
+            margin: 10px auto;
+            width: 670px;
+            font: 110%/120% Arial, Helvetica, sans-serif;
+        }
+        .accordion {
+            width: 680px;
+            border-bottom: solid 1px #fff;
+        }
+        .accordion h3 {
+            background: #e9e7e7 url(images/arrow-square.gif) no-repeat right -51px;  /*header bar background*/
+            padding: 7px 15px;
+            margin: 0;
+            font: bold 120%/100% Arial, Helvetica, sans-serif;
+            border: solid 1px #c4c4c4;
+            border-bottom: none;
+            cursor: pointer;
+        }
+        .accordion h3:hover {
+            background-color: #e3e2e2;
+        }
+        .accordion h3.active {
+            background-position: right 5px;
+        }
+        .accordion p {
+            background: #fff; /*description bar background*/
+            margin: 0;
+            padding: 10px 15px 20px;
+            border-left: solid 1px #c4c4c4;
+            border-right: solid 1px #c4c4c4;
+        }
+        </style>
+    </head>
+    
+    <body>
+        
+        <div class="accordion">
+            <h3>Overview</h3>
+            <p>Nothing's stronger, longer lasting, better on your tough aches and pains than Advil. And nothing works on more pains than Advil. In fact, to treat their own aches and pains, the medicine doctors use most is the medicine in Advil.</p>
+            <h3>Ingredients</h3>
+            <p>Active Ingredient (in each Tablet): Ibuprofen (200 mg). Inactive Ingredients: Acetylated Monoglycerides, Beeswax and/or Carnauba Wax, Croscarmellose Sodium, Iron Oxides, Lecithin, Methylparaben, Microcrystalline Cellulose, Pharmaceutical Glaze, Povidone, Propylparaben, Silicon Dioxide, Simethicone.</p>
+            <h3>Directions</h3>
+            <p>Do not take more than directed. The smallest effective dose should be used. Do not take longer than 10 days, unless directed by a doctor (see Warning). Adults and Children 12 Years and Over: Take 1 tablet every other 4 to 6 hours while symptoms persist. If pain or fever does not respond to 1 tablet, 2 tablets may be used.</p>
+            <h3>Warning</h3>
+            <p>Allergy Alert: Ibuprofen may cause a severe allergic reaction especially in people allergic to aspirin. Symptoms may include: hives; shock; facial swelling; skin reddening; asthma (wheezing); rash; blisters. In an allergic reaction occurs, stop use and seek medical help right away. Stomach Bleeding Warning.</p>
+            <h3>Reviews</h3>
+            <p><b>Dan90</b>-Great Pain Reliever-</p><p><img src="images/3star.png" alt="Alt text to go here" /></p>
+            <p><img src="images/4star.png" alt="Alt text to go here" /><b>Joe86</b>-Perfect for Headache -</p>
+            <p><img src="images/2star.png" alt="Alt text to go here" /><b>Per09</b>-Not Powerful Enough-</p>
+        </div>
+        
+    </body>
+</html>
+   <!-- 
 <body>
 
 
@@ -110,6 +123,7 @@ Advil® tablets, caplets, and gelcaps relieve headaches, backaches, muscle aches
 
    		
     </div>
+    Meta -->
     
 </body>
 </html>

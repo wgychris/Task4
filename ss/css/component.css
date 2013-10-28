@@ -16,7 +16,6 @@ body {
 
 .container {
 	overflow: hidden;
-	background-color: white;
 	/* we don't want the pseudo-elements sticking out */
 }
 
@@ -27,7 +26,7 @@ body {
 section {
 	position: relative;
 	padding: 1em 1%;
-	background: white;
+	background: #2980b9;
 	color: #fff;
 	text-align: center;
 }

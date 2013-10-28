@@ -1,3 +1,11 @@
+Optimal Resolution:
+
+   1600X900
+
+Optimal Browser:
+
+   Google Chrome (Internet Required)
+
 Website starting page:
 
  index.html

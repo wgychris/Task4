@@ -44,9 +44,9 @@
                 color:#f0f0f0;
             }
             .box{
-                margin:30px auto 0 auto;
+                margin:30px 0px 0px 50px;
                 height:0px;
-                width:10%;
+                width:5%;
                 position:relative;
                 -moz-box-shadow:0px 0px 5px #444;
                 -webkit-box-shadow:0px 0px 5px #444;
@@ -93,6 +93,8 @@
             }
             #content{
                 margin:0 auto;
+				width:100%;
+    min-width:200px;
             }
 
 
@@ -100,14 +102,14 @@
 	
     </head>
 
-    <body  style="background-color:#E2CFE0; background-repeat:repeat">
+    <body  style="background-image:url(husk.png); background-repeat:repeat">
         <div id="content">
            
 
             <div class="navigation" id="nav">
-                <div class="item user">
+                <div id="duser" class="item user">
                     <img src="images/bg_user.png" alt="" width="199" height="199" class="circle"/>
-                    <a href="#" class="icon"></a>
+                    <a class="icon"></a>
                     <h2>My Account</h2>
                     <ul>
                         <li><a title="Change Account Settings" target="_top" href="../my_account.html">Profile Settings</a></li>
@@ -116,9 +118,9 @@
                     </ul>
                 </div>
                 
-                <div class="item shop">
+                <div id="dshop" class="item shop">
                     <img src="images/bg_shop.png" alt="" width="199" height="199" class="circle"/>
-                    <a href="#" class="icon"></a>
+                    <a class="icon"></a>
                     <h2>Shop</h2>
                     <ul>
                         <li><a title="Buy Over the Counter Drugs" target="_top" href="../shop_otc.html">OTC</a></li>
@@ -126,9 +128,9 @@
                         <li><a title="Latest Deals & Offers" target="_top" href="../deals.html">Deals & Offers</a></li>
                     </ul>
                 </div>
-                <div class="item fav">
+                <div id="dfav" class="item fav">
                     <img src="images/bg_fav.png" alt="" width="199" height="199" class="circle"/>
-                    <a href="#" class="icon"></a>
+                    <a class="icon"></a>
                     <h2>Ask a Pharmacist</h2>
                     <ul>
                         <li><a title="Contact Us" target="_top" href="../help.html">Customer Service</a></li>
@@ -146,7 +148,7 @@
             </div>
 			<div class="box">
 			
-                <form id="ui_element" target="_top" action="../product_details.html" class="sb_wrapper">
+                <form id="ui_element" target="_top" action="../search_result.html" class="sb_wrapper">
                     <p>
 						<span class="sb_down"></span>
 						<div class="ui-widget">
@@ -184,7 +186,7 @@
 											</ul>
                 </form>
             </div>
-        </div><br><br><br><br><br>
+        </div>
 		
 	
 		

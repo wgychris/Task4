@@ -200,7 +200,62 @@ try{if (!window.CloudFlare) { var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",ba
 
 			});
 		</script>
+
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="../source/jquery.fancybox.js?v=2.1.5"></script>
+
+<link rel="stylesheet" type="text/css" href="../source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+
+
+	<script type="text/javascript">
+		$(document).ready(function() {
 		
+			$('.fancybox').fancybox();
+
+		
+			$(".fancybox-effects-a").fancybox({
+				helpers: {
+					title : {
+						type : 'outside'
+					},
+					overlay : {
+						speedOut : 0
+					}
+				}
+			});
+
+		
+			$('.fancybox-buttons').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					buttons	: {}
+				},
+
+				afterLoad : function() {
+					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+				}
+			});
+});
+	</script>
+	<style type="text/css">
+		.fancybox-custom .fancybox-skin {
+			box-shadow: 0 0 50px #fff;
+		}
+
+	</style>
+	
 		<title>National Parks - A MixItUp Demo</title>
 
 </head>
@@ -212,7 +267,7 @@ try{if (!window.CloudFlare) { var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",ba
 		<header class="ns">
 		
 			<div class="wrapper just wf">
-				<a class="ib" target="_top" href="../../home.html">
+				<div class="ib" target="_top" >
 					<div id="Logo" class="ib">
 						<ul class="ib anim150 just">
 							<li></li>
@@ -226,8 +281,8 @@ try{if (!window.CloudFlare) { var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",ba
 							<li></li>
 						</ul>
 					</div>
-					<h1 class="ib"><strong>Headache </strong>: Product Details</h1>
-				</a>
+					<h1 class="ib"><strong>Headache </strong>: Product Listing</h1>
+				</div>
 				<!--<a href="#">
 					<div class="ib anim150 button">Download Demo</div>
 				</a>-->
@@ -245,8 +300,7 @@ try{if (!window.CloudFlare) { var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",ba
 			<nav class="controls just">
 				<div class="group" id="Sorts">
 					<div class="button active" id="ToList"><i></i>List View</div>
-					<div class="button" id="ToGrid"><i></i>Grid View</div>
-				</div>
+					</div>
 				<div class="group" id="Filters">
 					<div class="drop_down wf">
 						<span class="anim150">By Brand</span>
@@ -262,7 +316,7 @@ try{if (!window.CloudFlare) { var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",ba
 					</div>
 					
 					<div class="drop_down wf">
-						<span class="anim150">By Review</span>
+						<span class="anim150">By Rating</span>
 						<ul class="anim250">
 							<li class="active" data-filter="all" data-dimension="recreation">All</li>
 							<li data-filter="One_Star" data-dimension="recreation">One Star</li>
@@ -301,7 +355,7 @@ try{if (!window.CloudFlare) { var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",ba
 					</div>
 					<div class="meta region">Brand</div>
 
-					<div class="meta recreation">Review</div>
+					<div class="meta recreation">Rating</div>
 										<div class="meta recreation1">Quantity</div>
 	
 					<div class="meta area" id="SortByArea">
@@ -319,9 +373,9 @@ try{if (!window.CloudFlare) { var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",ba
 				
 				<li class="mix Advil One_Star otf" data-name="Advil" data-area="1">
 					<div class="meta name">
-						<div class="img_wrapper">
-							<img src="im/advil.jpg" onload="imgLoaded(this)"/>
-						</div>
+						
+							<a class="fancybox-effects-a" href="im/advil.jpg" title="Click to zoom"><img width="177px" height="95px" src="im/advil.jpg"/></a>
+						
 						<div class="titles">
 							<h2>Advil</h2>
 							<p><em>Advanced Medicine </em></p>
@@ -340,15 +394,15 @@ try{if (!window.CloudFlare) { var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",ba
 						<p>200 mg-50 Tablets</p>
 					</div>
 					<div class="meta area">
-						<h4>$1</h4><p><a title="Click here to buy this Item" target="_top" href="../../cart.html"><img src="im/ac.gif"/></a></p>
+						<h4>$1</h4><p><a title="Click here to buy this Item" target="_top" href="../../cart_detail.html"><img src="im/ac.gif"/></a></p>
 					</div>
 				</li>
 				
 				<li class="mix Bayer Three_Star ftt" data-name="Bayer" data-area="10">
 					<div class="meta name">
-						<div class="img_wrapper">
-							<img src="im/alka-seltzer.jpg" onload="imgLoaded(this)"/>
-						</div>
+						
+						<a class="fancybox-effects-a" href="im/alka-seltzer.jpg" title="Click to zoom"><img width="177px" height="95px" src="im/alka-seltzer.jpg"/></a>
+						
 						<div class="titles">
 							<h2>Alka</h2>
 							<p><em>Seltzer Plus</em></p>
@@ -366,14 +420,12 @@ try{if (!window.CloudFlare) { var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",ba
 						<p>20 Liquid Gels</p>
 					</div>
 					<div class="meta area">
-						<h4>$10</h4><p><a title="Click here to buy this Item" target="_top" href="../../cart.html"><img src="im/ac.gif"/></a></p>
+						<h4>$10</h4><p><a title="Click here to buy this Item" target="_top" href="../../cart_detail.html"><img src="im/ac.gif"/></a></p>
 					</div>
 				</li>
 				<li class="mix Bayer Two_Star otf" data-name="Bayer" data-area="5">
 					<div class="meta name">
-						<div class="img_wrapper">
-							<img src="im/bayer.jpg" onload="imgLoaded(this)"/>
-						</div>
+						<a class="fancybox-effects-a" href="im/bayer.jpg" title="Click to zoom"><img width="177px" height="95px" src="im/bayer.jpg"/></a>
 						<div class="titles">
 							<h2>Bayer</h2>
 							<p><em>Headache Relief</em></p>
@@ -392,14 +444,13 @@ try{if (!window.CloudFlare) { var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",ba
 					</div>
 					
 					<div class="meta area">
-						<h4>$5</h4><p><a title="Click here to buy this Item" target="_top" href="../../cart.html"><img src="im/ac.gif"/></a></p>
+						<h4>$5</h4><p><a title="Click here to buy this Item" target="_top" href="../../cart_detail.html"><img src="im/ac.gif"/></a></p>
 					</div>
 				</li>
 				<li class="mix Benadryl Three_Star fttw" data-name="Benadryl" data-area="20">
 					<div class="meta name">
-						<div class="img_wrapper">
-							<img src="im/benadryl.jpg" onload="imgLoaded(this)"/>
-						</div>
+							<a class="fancybox-effects-a" href="im/benadryl.jpg" title="Click to zoom"><img width="177px" height="95px" src="im/benadryl.jpg"/></a>
+					
 						<div class="titles">
 							<h2>Benadryl</h2>
 							<p><em>Maximum Strength</em></p>
@@ -416,14 +467,13 @@ try{if (!window.CloudFlare) { var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",ba
 						<p>20 Caplets</p>
 					</div>
 					<div class="meta area">
-						<h4>$20</h4><p><a title="Click here to buy this Item" target="_top" href="../../cart.html"><img src="im/ac.gif"/></a></p>
+						<h4>$20</h4><p><a title="Click here to buy this Item" target="_top" href="../../cart_detail.html"><img src="im/ac.gif"/></a></p>
 					</div>
 				</li>
 				<li class="mix Equate Four_Star ttf" data-name="Equate" data-area="15">
 					<div class="meta name">
-						<div class="img_wrapper">
-							<img src="im/equate.jpg" onload="imgLoaded(this)"/>
-						</div>
+							<a class="fancybox-effects-a" href="im/equate.jpg" title="Click to zoom"><img width="177px" height="95px" src="im/equate.jpg"/></a>
+					
 						<div class="titles">
 							<h2>Equate</h2>
 							<p><em>Allergy Headache</em></p>
@@ -441,7 +491,7 @@ try{if (!window.CloudFlare) { var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",ba
 						<p>24 Caplets</p>
 					</div>
 					<div class="meta area">
-					<h4>$15</h4><p><a title="Click here to buy this Item" target="_top" href="../../cart.html"><img src="im/ac.gif"/></a></p>
+					<h4>$15</h4><p><a title="Click here to buy this Item" target="_top" href="../../cart_detail.html"><img src="im/ac.gif"/></a></p>
 					</div>
 				</li>
 				

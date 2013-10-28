@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.0/themes/ui-lightness/jquery-ui.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+$(document).ready(function() {
+$('#thedialog').dialog({ autoOpen: false })
+$('#thelink').click(function(){ $('#thedialog').dialog('open'); });
+})
+    </script>
+</head>
+<body>
+<a href="#" id="thelink">Clickme</a>
+<div id="thedialog" title="Download complete">
+  <iframe src="cart.html"/>
+</div>
+
+</body>
+</html>

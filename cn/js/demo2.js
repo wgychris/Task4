@@ -13,7 +13,7 @@
 	    classie.add(wrapper, 'opened-nav');
 	  }
 	  else{
-	    this.innerHTML = "General Wellness";
+	    this.innerHTML = "Health & Medicine";
 		classie.remove(wrapper, 'opened-nav');
 	  }
 	  open = !open;
