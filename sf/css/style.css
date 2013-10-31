@@ -3,9 +3,10 @@
     padding:0px;
 }
 body{
+    color:#444444;
     font-size:13px;
     background: #f2f2f2;
-    font-family:'Open Sans';
+    font-family:"Century Gothic", Helvetica, sans-serif;
 }
 #content{
     margin:15px auto;
@@ -62,10 +63,8 @@ body{
     display:block;
     height:45px;
     background-color:#444;
-    color:#333;
+    color:#777;
     outline:none;
-    font-family: 'Open Sans';
-    font-size: 16px;
     font-weight:bold;
     text-decoration:none;
     line-height:45px;
@@ -93,7 +92,7 @@ body{
 #navigation ul li a:hover,
 #navigation ul li.selected a{
     background:#d8d8d8;
-    color:black;
+    color:#666;
     text-shadow:1px 1px 1px #fff;
 }
 span.checked{
@@ -119,9 +118,9 @@ span.error{
 #steps form legend{
     text-align:left;
     background-color:#f0f0f0;
-    color:black;
-    font-family:'Open Sans';
+    color:#666;
     font-size:24px;
+    text-shadow:1px 1px 1px #fff;
     font-weight:bold;
     float:left;
     width:590px;
@@ -145,17 +144,15 @@ span.error{
     -moz-box-shadow:0px 0px 3px #aaa;
     -webkit-box-shadow:0px 0px 3px #aaa;
     box-shadow:0px 0px 3px #aaa;
-    font-family: 'Open Sans';
-    font-size: 16px;
 }
 #steps form p label{
-    font-family:'Open Sans';
-    font-size: 18px;
     width:160px;
     float:left;
     text-align:right;
     margin-right:15px;
     line-height:26px;
+    color:#666;
+    text-shadow:1px 1px 1px #fff;
     font-weight:bold;
 }
 #steps form input:not([type=radio]),
@@ -190,23 +187,23 @@ span.error{
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    color: black;
+    color: #ffffff;
     display: block;
     cursor:pointer;
     margin: 0px auto;
     clear:both;
     padding: 7px 25px;
-    
+    text-shadow: 0 1px 1px #777;
     font-weight:bold;
-    font-family:"Open Sans";
+    font-family:"Century Gothic", Helvetica, sans-serif;
     font-size:22px;
     -moz-box-shadow:0px 0px 3px #aaa;
     -webkit-box-shadow:0px 0px 3px #aaa;
     box-shadow:0px 0px 3px #aaa;
-    background:#d8d8d8;
-    margin-top: 20px;
+    background:#4797ED;
 }
 #steps form button:hover {
-    background:#4797ED;
-    color:white;
+    background:#d8d8d8;
+    color:#666;
+    text-shadow:1px 1px 1px #fff;
 }

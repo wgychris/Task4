@@ -67,7 +67,7 @@
   min-height: 20px;
   padding: 20px;
   margin-bottom: 10px;
-  background-color: #E2CFE0;
+  background-color: #3498DB;
   border: 1px solid #e3e3e3;
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
@@ -182,7 +182,7 @@ div#checkOutStepContainer div#stepTitle table {
 
 div#checkOutStepContainer div#stepTitle table td {
 	width: 25%;
-	padding: 2px 0px 5px 15px;
+	padding: 5px 0px 5px 15px;
 }
 
 div#checkOutStepContainer div#stepTitle table td.current {

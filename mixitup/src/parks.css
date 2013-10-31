@@ -296,7 +296,8 @@ header .button:hover{
 /* ------ DEMO #2. NATIONAL PARKS ------ */
 
 body{
-	font-family: 'Open Sans';
+	background: #f9f6f0;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 .wrapper{
@@ -339,7 +340,7 @@ body{
 .controls{
 	height: 100px;
 	line-height: 100px;
-	}
+}
 
 .group{
 	display: inline-block;
@@ -659,7 +660,7 @@ body{
 }
 
 #Parks.list .mix .meta *{
-	
+	line-height: 1;
 }
 
 #Parks.list .mix .meta p,

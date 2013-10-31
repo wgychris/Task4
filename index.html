@@ -1,97 +1,76 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>UPMC Home</title>
-        <meta name="description" content="" />
-        <meta name="keywords" content="" />
-        <meta name="author" content="Codrops" />
-        <link rel="shortcut icon" href="../favicon.ico">
-        <link rel="stylesheet" type="text/css" href="css/default.css" />
-        <link rel="stylesheet" type="text/css" href="css/component.css" />
-        <script src="js/modernizr.custom.js"></script>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>UPMC Home</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="cn/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="cn/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="cn/css/component2.css" />
+		<script src="cn/js/modernizr-2.6.2.min.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="ss/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="ss/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="ss/css/icons.css" />
+		<link rel="stylesheet" type="text/css" href="ss/css/component.css" />
 
-        <link rel="stylesheet" type="text/css" href="cn/css/normalize.css" />
-        <link rel="stylesheet" type="text/css" href="cn/css/demo.css" />
-        <link rel="stylesheet" type="text/css" href="cn/css/component2.css" />
-        <script src="cn/js/modernizr-2.6.2.min.js"></script>
-
-        <link rel="stylesheet" type="text/css" href="ss/css/normalize.css" />
-        <link rel="stylesheet" type="text/css" href="ss/css/demo.css" />
-        <link rel="stylesheet" type="text/css" href="ss/css/icons.css" />
-        <link rel="stylesheet" type="text/css" href="ss/css/component.css" />
-
-        <style>
+		<style>
 .pixels {
-    font-size: 16px;
-    line-height: 30px;
-    margin-bottom: 20px;
-    padding: 20px;
+	font-size:16px;
+	line-height:30px;
+	margin-bottom:20px;
+	padding:20px;
 }
-
 .point {
-    font-size: 12pt;
-    line-height: 30px;
-    margin-bottom: 20px;
-    padding: 20px;
+	font-size:12pt;
+	line-height:30px;
+	margin-bottom:20px;
+	padding:20px;
 }
-
 .em {
-    font-size: 1em;
-    margin-bottom: 20px;
-    padding: 20px;
+	font-size:1em;
+	margin-bottom:20px;
+	padding:20px;
 }
-
 .percentage {
-    font-size: 100%;
-    margin-bottom: 20px;
-    padding: 20px;
+	font-size:100%;
+	margin-bottom:20px;
+	padding:20px;
 }
-
 .undefined {
-    margin-bottom: 20px;
-    padding: 20px;
+	margin-bottom:20px;
+	padding:20px;
 }
-
 #changeFont {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 5px;
+	position:absolute;
+	top:10px;
+	right:10px;
+	padding:5px;
 }
-
-.increaseFont,.decreaseFont,.resetFont {
-    color: #CCCCCC;
-    font-size: 14px;
-    float: left;
-    margin: 10px;
+.increaseFont, .resetFont {
+	color:#CCCCCC;
+	font-size:14px;
+	float:left;
+	margin:10px;
 }
-
-#footerOfWebPages{
-    color: black;
-    padding-top: 20px;
-    padding-bottom: 20px;
+.decreaseFont{
+	color:#CCCCCC;
+	font-size:12px;
+	float:left;
+	margin:10px;
 }
-
-#aFooterOfWebPages{
-    font-size: 12px;
-    color: #666;
-    display: inline;
-    padding:20px; 
-    margin-bottom: 10px;
-}
-#pFooterOfWebPages{
-    padding-top: 5px;
-    font-size: 12px;
-    color: #666;
-}
-
 </style>
-        <script type="text/javascript" language="javascript"
-            src="jquery-1.2.2.pack.js"></script>
-        <script type="text/javascript" language="javascript">
+<script type="text/javascript" language="javascript" src="jquery-1.2.2.pack.js"></script>
+<script type="text/javascript" language="javascript">
 $(document).ready(function(){
   // Reset Font Size
   var originalFontSize = $('html').css('font-size');
@@ -100,26 +79,26 @@ $(document).ready(function(){
   });
   // Increase Font Size
   $(".increaseFont").click(function(){
-    var currentFontSize = $('html').css('font-size');
-    var currentFontSizeNum = parseFloat(currentFontSize, 10);
+  	var currentFontSize = $('html').css('font-size');
+ 	var currentFontSizeNum = parseFloat(currentFontSize, 10);
     var newFontSize = currentFontSizeNum*1.2;
-    $('html').css('font-size', newFontSize);
-    return false;
+	$('html').css('font-size', newFontSize);
+	return false;
   });
   // Decrease Font Size
   $(".decreaseFont").click(function(){
-    var currentFontSize = $('html').css('font-size');
-    var currentFontSizeNum = parseFloat(currentFontSize, 10);
+  	var currentFontSize = $('html').css('font-size');
+ 	var currentFontSizeNum = parseFloat(currentFontSize, 10);
     var newFontSize = currentFontSizeNum*0.8;
-    $('html').css('font-size', newFontSize);
-    return false;
+	$('html').css('font-size', newFontSize);
+	return false;
   });
 });
 </script>
 
-        <script type="text/javascript" src="js/jquery-1.4.3.min.js"></script>
-
-        <script type="text/javascript">
+            <script type="text/javascript" src="js/jquery-1.4.3.min.js"></script>
+      
+    <script type="text/javascript">
         $(document).ready(function () {
 
             jQuery.noConflict();
@@ -181,763 +160,515 @@ $(document).ready(function(){
 
       
     </script>
-    </head>
-    <body>
+	 <link rel="stylesheet" href="css/style_menu.css" type="text/css" media="screen"/>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+			 span.reference{
+                position:fixed;
+                left:10px;
+                bottom:10px;
+                font-size:11px;
+            }
+            span.reference a{
+                color:#fff;
+                text-decoration:none;
+                text-transform: uppercase;
+                text-shadow:0 1px 0 #000;
+            }
+            span.reference a:hover{
+                color:#f0f0f0;
+            }
+            .box{
+                margin:30px 0px 0px 50px;
+                height:0px;
+                width:5%;
+				z-index:10;
+                position:relative;
+                -moz-box-shadow:0px 0px 5px #444;
+                -webkit-box-shadow:0px 0px 5px #444;
+                box-shadow:0px 0px 5px #444;
+                background:#1783BF url(click.png) no-repeat 380px 80px;
+            }
+            .box h2{
+				background-color:#1275AD;
+				border-color:#0E5A85 #0E5A85 #0E5A85;
+				border-style:ridge ridge solid;
+				border-width:1px;
+				color:#000;
+				font-size:22px;
+				padding:10px;
+				text-shadow:1px 1px 1px #000000;
+            }
+			.yui3-skin-sam
+			{
+			z-index:10;
+			color:#000;
+			background-color:#E2CFE0;
+			}
+        </style>
+					<link rel="stylesheet" href="es/css/style.css" type="text/css" media="screen"/>
+		 	</head>
 
-        <div class="container demo-2">
-            <!-- Top Navigation -->
-            <div class="codrops-top clearfix">
-                <a class="codrops-icon " href="index.html"><span><img
-                            src="upmc.jpg">
-                </span>
-                </a>
+			<body>
+	
+	<div class="container demo-2">
+	
+	<!-- Top Navigation -->
+			<div class="codrops-top clearfix">
+				<a class="codrops-icon " href="index.html"><span><img src="upmc.jpg"></span></a>
+				
+				
+			</div>
+				  
+			<div id="changeFont">
+			
+<a href="#" title="Decrease Font Size" class="decreaseFont">A</a>
+			<a href="#" title="Increase Font Size" class="increaseFont">A</a>
 
+<a href="#" title="Reset Font Size" class="resetFont">Reset</a>
 
-            </div>
-            <div id="changeFont">
-
-                <a href="#" title="Increase Font Size" class="increaseFont">Increase</a>
-                <a href="#" title="Decrease Font Size" class="decreaseFont">Decrease</a>
-                <a href="#" title="Reset Font Size" class="resetFont">Reset</a>
-
-                <link rel="stylesheet" href="login/css/style.css" />
-                <script
-                    src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2"></script>
-                <script src="login/js/login.js"></script>
-
-                <!-- Login Starts Here -->
-                <div id="container3">
-
-                    <div id="loginContainer2">
-                        <a title="View Cart" href="cart_detail.html"><span>&nbsp;&nbsp;<img
-                                    src="images/cart-icon.jpg">
-                        </span><em></em>
-                        </a>
-
-                    </div>
-                </div>
-                <div id="container1">
-
-                    <div id="loginContainer">
-                        <a href="#" id="loginButton"><span>Login</span><em></em>
-                        </a>
-                        <div style="clear: both"></div>
-                        <div id="loginBox">
-                            <form id="loginForm" action="index_login.html" method="post">
-                                <fieldset id="body">
-                                    <fieldset>
-                                        <!--label for="email">
-                                            Email Address
-                                        </label-->
-                                        <input type="text" placeholder="Email Address" name="email" id="email" />
-                                    </fieldset>
-                                    <fieldset>
-                                        <!--label for="password">
-                                            Password
-                                        </label-->
-                                        <input type="password" placeholder="Password" name="password"
-                                            id="password" />
-                                    </fieldset>
-                                    <input type="submit" id="login" value="Log In" />
-                                   
-                                        <label for="checkbox" style="
-    font-size: 16px;
-    margin-top: 5px;
-">
-                                        <input type="checkbox" id="checkbox" />
-                                        Remember me
-                                    </label>
-                                    <input id="facebookLogin" title="Login with a Facebook account"
-                                        type="image" alt="Submit" src="login/facebookLogin.png" style=" padding: 0px; border: 0px;"/>
-
-                                    <input id="googleLogin" title="Login with a Google Account"
-                                        type="image" alt="Submit" src="login/googleLogin.png" style=" padding: 0px; border: 0px;"/><span><a title="We will help you retrieve your password"
-                                    href="#" style="font-size:16px">Forgot your password?</a>
-                                </span>
-
-                                </fieldset>
-                                
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div id="container2">
-                    <div id="loginContainer1">
-                        <a href="#" id="loginButton1"><span>Sign Up</span><em></em>
-                        </a>
-                        <div style="clear: both"></div>
-                        <div id="loginBox1">
-                            <form id="loginForm1">
-                                <fieldset id="body1">
-                                    <fieldset>
-
-                                        <label for="email">
-                                            <h3 style="margin-bottom: 10px;    font-size: 18px;">
-                                                New to UPMC Pharmacy?
-                                            </h3>
-                                        </label>
-                                        <!--label for="email">
-                                            Email Address
-                                        </label-->
-                                        <input type="text"
-                                            placeholder="Email Address"
-                                            title="This will be your Username" name="email" id="email1" />
-                                    </fieldset>
-                                    <fieldset>
-                                        <!--abel for="password">
-                                            Password
-                                        </label-->
-                                        <input type="password" placeholder="Password" name="password"
-                                            id="password1" />
-                                    </fieldset>
-                                    <input type="submit" id="login1"
-                                        title="Click here to Register with UPMC pharmacy"
-                                        value="Sign Up" />
-
-                                </fieldset>
-                            </form>
-                        </div>
-                    </div>
+ <link rel="stylesheet" href="login/css/style.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2"></script>
+    <script src="login/js/login.js"></script>
+	
+            <!-- Login Starts Here -->
+			<div id="container3">
+			
+            <div id="loginContainer2">
+                <a title="View Cart" href="cart_detail.html"><span>&nbsp;&nbsp;<img src="images/cart-icon.jpg"></span><em></em></a>
+               
                 </div>
             </div>
+				<div id="container1">
+			
+            <div id="loginContainer">
+                <a href="#" id="loginButton"><span>Login</span><em></em></a>
+                <div style="clear:both"></div>
+                <div id="loginBox">                
+                    <form id="loginForm" action="index_login.html" method="post">
+                        <fieldset id="body">
+                            <fieldset>
+                                <label for="email">Email Address</label>
+                                <input type="text" placeholder="Email" name="email" id="email" />
+                            </fieldset>
+                            <fieldset>
+                                <label for="password">Password</label>
+                                <input type="password" placeholder="Password" name="password" id="password" />
+                            </fieldset>
+                            <input type="submit" id="login" value="Log In" />
+                            <label for="checkbox"><input type="checkbox" id="checkbox" />Remember me</label>
+							<input id = "facebookLogin" title="Login with a Facebook account" type="image" alt="Submit" src="login/facebookLogin.png">
+	<input id = "googleLogin" title="Login with a Google Account" type="image" alt="Submit" src="login/googleLogin.png" >
 
-            <header>
-            <iframe src="bn/test.html"
-                style="width: 100%; height: 200px; color: #429a67; border-width: 0px; border-color: #990033; border-style: solid;"
-                scrolling="no">
-            </iframe>
-            </header>
-            <link href="css/templatemo_style.css" rel="stylesheet"
-                type="text/css" />
+                        </fieldset>
+                        <span><a title="We will help you retrieve your password" href="#">Forgot your password?</a></span>
+                    </form>
+                </div></div>
+            </div>
+			<div id="container2">
+            <div id="loginContainer1">
+                <a href="#" id="loginButton1"><span>Sign Up</span><em></em></a>
+                <div style="clear:both"></div>
+                <div id="loginBox1">                
+                    <form id="loginForm1">
+                        <fieldset id="body1">
+                            <fieldset>
+
+							 <label for="email"><h3>New to UPMC Pharmacy?</h3></label>
+                                <label for="email">Email Address</label>
+                                <input type="text" placeholder="Email (This will be your UserID)" title="This will be your Username" name="email" id="email1" />
+                            </fieldset>
+                            <fieldset>
+                                <label for="password">Password</label>
+                                <input type="password" placeholder="Password" name="password" id="password1" />
+                            </fieldset>
+                            <input type="submit" id="login1" title="Click here to Register with UPMC pharmacy" value="Sign Up" />
+
+                        </fieldset>
+                    </form>
+                </div></div>
+            </div>
+</div>
+<header>
+		  <div class="navigation1" id="nav">
+                <div class="item1 user">
+                    <img src="images/bg_user.png" alt="" width="199" height="199" class="circle"/>
+                    <a href="#" class="icon"></a>
+                    <h2>My Account</h2>
+                    <ul>
+                        <li><a title="Account Details" href="my_account.html">Profile</a></li>
+                        <li><a title="Order details" href="order_history.html">Order History</a></li>
+                        <li><a title="Prescription details" href="prescription_history.html">Prescription History</a></li>
+                    </ul>
+                </div>
+             
+                <div class="item1 shop">
+                    <img src="images/bg_shop.png" alt="" width="199" height="199" class="circle"/>
+                    <a href="#" class="icon"></a>
+                    <h2>Shop</h2>
+                    <ul>
+                        <li><a title="Shop Over the Counter Drugs"href="shop_otc.html">OTC</a></li>
+                        <li><a title="Shop Prescription Drugs" href="shop_prescription.html">Prescription</a></li>
+                        <li><a title="Deals & Offers" href="deals.html">Offers</a></li>
+                    </ul>
+                </div>
+             
+                <div class="item1 fav">
+                    <img src="images/bg_fav.png" alt="" width="199" height="199" class="circle"/>
+                    <a href="#" class="icon"></a>
+                    <h2>Help</h2>
+                    <ul>
+                        <li><a title="Get Customer Help" href="help.html">Customer Support</a></li>
+
+                        <li><a title="Privacy Queries" href="help.html">Security & Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+				<div class="box">
+			
+                <form id="ui_element" target="_top" action="search_result.html" class="sb_wrapper">
+                    <p>
+						<span class="sb_down"></span>
+						<div class="ui-widget">
+	<p class="yui3-skin-sam"><input id="tags" class="sb_input" type="text"/></p>
+	<input class="sb_search" type="submit" value=""/>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+	 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>    
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	 <script type="text/javascript">
+            $(function() {
+				/**
+				* the element
+				*/
+				var $ui 		= $('#ui_element');
+				
+				/**
+				* on focus and on click display the dropdown, 
+				* and change the arrow image
+				*/
+				$ui.find('.sb_input').bind('focus click',function(){
+					$ui.find('.sb_down')
+					   .addClass('sb_up')
+					   .removeClass('sb_down')
+					   .andSelf()
+					   .find('.sb_dropdown')
+					   .show();
+				});
+				
+				/**
+				* on mouse leave hide the dropdown, 
+				* and change the arrow image
+				*/
+				$ui.bind('mouseleave',function(){
+					$ui.find('.sb_up')
+					   .addClass('sb_down')
+					   .removeClass('sb_up')
+					   .andSelf()
+					   .find('.sb_dropdown')
+					   .hide();
+				});
+				
+				/**
+				* selecting all checkboxes
+				*/
+				$ui.find('.sb_dropdown').find('label[for="all"]').prev().bind('click',function(){
+					$(this).parent().siblings().find(':checkbox').attr('checked',this.checked).attr('disabled',this.checked);
+				});
+            });
+        </script>
+	 <script src="http://yui.yahooapis.com/3.5.1/build/yui/yui-min.js"></script>
+
+<script>
+YUI().use("autocomplete", "autocomplete-filters",  function (Y) {
+  var states = [
+    'Aspirin',
+    'Headache',
+	    'Headache Medicine',
+		    'Headache drug',
+			    'Advil'
+  ];
+ 
+  Y.one('#tags').plug(Y.Plugin.AutoComplete, {
+    resultFilters    : 'phraseMatch',
+    resultHighlighter: 'phraseMatch',
+    source           : states
+  });
+});
+</script>
+</div>
+						
+					</p>
+					<ul class="sb_dropdown" style="display:none;">
+						<li class="sb_filter">Filter your search</li>
+						<li><input type="checkbox"/><label for="all"><strong>All Categories</strong></label></li>
+						<li><input type="checkbox"/><label for="Automotive">General Wellness</label></li>
+						<li><input type="checkbox"/><label for="Baby">Baby & Mom</label></li>
+						<li><input type="checkbox"/><label for="Beauty">Diet & Nutrition</label></li>
+						<li><input type="checkbox"/><label for="Books">Personal Care</label></li>
+						<li><input type="checkbox"/><label for="Cell">Sexual Health</label></li>
+											</ul>
+                </form>
+            </div>
+		</header>	
+        <!-- The JavaScript -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('#nav > div').hover(
+                function () {
+                    var $this = $(this);
+					$this.find('img').css('z-index','8');
+                    	    
+                    $this.find('img').stop().animate({
+                        'width'     :'199px',
+                        'height'    :'199px',
+                        'top'       :'-25px',
+                        'left'      :'-25px',
+                        'opacity'   :'1.0'
+					
+                    },500,'easeOutBack',function(){
+                        $(this).parent().find('ul').fadeIn(700);
+                    }
+					);
+                    $this.find('ul').css('display','block');
+                    $this.find('a:first,h2').addClass('active');
+                },
+                function () {
+                    var $this = $(this);
+					$this.find('ul').css('display','none');
+                    $this.find('ul').fadeOut(500);
+                    $this.find('img').stop().animate({
+                        'width'     :'52px',
+                        'height'    :'52px',
+                        'top'       :'0px',
+                        'left'      :'0px',
+                        'opacity'   :'0.1',
+						'z-index'    :'8'
+						
+                    },5000,'easeOutBack');
+
+                    $this.find('a:first,h2').removeClass('active');
+                }
+            );
+            });
+        </script>
+     
+        <!-- The JavaScript -->
+       
+			  <link href="css/templatemo_style.css" rel="stylesheet" type="text/css" />
 
 
 
-            <!-- <script type="text/javascript" src="javascript/jquery.min.js"></script> -->
-            <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-            <script type="text/javascript" src="js/jquery.menu-aim.js"></script>
-
-
-            <script
-                src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
-            <link rel='stylesheet' type='text/css' href='ms/styles.css' />
-            <div class='left-tab'>
-                <!--just cut this div and place to your desired place-->
-                <div id="sidebar" class="float_l">
-                    <div class="sidebar_box" style="position: relative">
+    <!-- <script type="text/javascript" src="javascript/jquery.min.js"></script> -->
+    <script type="text/javascript" src="js/jquery.menu-aim.js"></script>
+	
+	
+			<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+<link rel='stylesheet' type='text/css' href='ms/styles.css' />
+			<div class = 'left-tab'>
+ <!--just cut this div and place to your desired place-->
+      <div id="sidebar" class="float_l">
+                    <div class="sidebar_box" style="position:relative">
                         <span class="bottom"></span>
-                        <h3>
-                            Categories
-                        </h3>
+                        <h3>Shop Categories</h3>
                         <div class="content">
-                            <ul class="sidebar_list" role="menu">
-                                <li class="first" data-submenu-id="submenu-1">
-                                    <a href="product_details.html">Pain & fever relief</a>
-                                    <div id="submenu-1" class="popover">
-                                        <h3 class="popover-title">
-                                            Pain & fever relief
-                                        </h3>
-                                        <div class="popover-content"
-                                            style="background-image: url('images/category/category_1.jpg');">
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Arthritis pain relief</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Children's pain relief</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Cold & hot packs</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Hemorrhoids</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Menstrual pain relief</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Migraine relief</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Oral pain relief</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Natural pain & fever relief</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Oral pain relief</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Rubs & ointments</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                        </div>
-                                    </div>
-                                </li>
-                                <li data-submenu-id="submenu-2">
-                                    <a href="product_details.html">Cough, cold & flu</a>
-                                    <div id="submenu-2" class="popover">
-                                        <h3 class="popover-title">
-                                            Cough, cold & flu
-                                        </h3>
-                                        <div class="popover-content"
-                                            style="background-image: url('images/category/category_2.jpg');">
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Adult cold medicine</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Chest rubs</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Children's cold medicine</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Cough drops and sore throat</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Flu fighters</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Nasal care</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Natural remedies</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Sinus congestion & pain</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Uv sanitizers</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                        </div>
-                                    </div>
-                                </li>
-                                <li data-submenu-id="submenu-3">
-                                    <a href="product_details.html">Allergy & sinus</a>
-                                    <div id="submenu-3" class="popover">
-                                        <h3 class="popover-title">
-                                            Allergy & sinus
-                                        </h3>
-                                        <div class="popover-content"
-                                            style="background-image: url('images/category/category_3.jpg');">
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Air care</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Allergy & sinus medicine</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Allergy eye care</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Asthma care</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Baby & kids</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Bedding & bath</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Cleaning products</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Humidifiers/vaporizers</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Laundry care</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Nasal care</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                        </div>
-                                    </div>
-                                </li>
-                                <li data-submenu-id="submenu-4">
-                                    <a href="product_details.html">Digestion & nausea</a>
-                                    <div id="submenu-4" class="popover">
-                                        <h3 class="popover-title">
-                                            Digestion & nausea
-                                        </h3>
-                                        <div class="popover-content"
-                                            style="background-image: url('images/category/category_4.jpg');">
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Antacid liquid</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Antacid tablets</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Anti-diarrheals</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Anti-gas</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Natural digestive remedies</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Children's digestive aids</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Enemas</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Lactose intolerance</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Fibers</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                        </div>
-                                    </div>
-                                </li>
-                                <li data-submenu-id="submenu-5">
-                                    <a href="product_details.html">Incontinence aids</a>
-                                    <div id="submenu-5" class="popover">
-                                        <h3 class="popover-title">
-                                            Incontinence aids
-                                        </h3>
-                                        <div class="popover-content"
-                                            style="background-image: url('images/category/category_5.jpg');">
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Bedding protection</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Bedpans & accessories</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Bladder control devices</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Gloves & masks</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Guards</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Incontinence skin care</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                        </div>
-                                    </div>
-                                </li>
-                                <li data-submenu-id="submenu-6">
-                                    <a href="product_details.html">Skin condition treatments</a>
-                                    <div id="submenu-6" class="popover">
-                                        <h3 class="popover-title">
-                                            Skin condition treatments
-                                        </h3>
-                                        <div class="popover-content"
-                                            style="background-image: url('images/category/category_6.jpg');">
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Acne care</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Eczema</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Psoriasis</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Scar & wound</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Stelatopia</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                        </div>
-                                    </div>
-                                </li>
-                                <li data-submenu-id="submenu-7">
-                                    <a href="product_details.html">Diabetes management</a>
-                                    <div id="submenu-7" class="popover">
-                                        <h3 class="popover-title">
-                                            Diabetes management
-                                        </h3>
-                                        <div class="popover-content"
-                                            style="background-image: url('images/category/category_7.jpg');">
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Accessories</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Blood test strips</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Control solutions</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Diabetic monitors & kits</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Foot & wound care</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Glucose foods</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Lancets & tips</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Oral care</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                        </div>
-                                    </div>
-                                </li>
-                                <li data-submenu-id="submenu-8">
-                                    <a href="product_details.html">Sleep & snoring aids</a>
-                                    <div id="submenu-8" class="popover">
-                                        <h3 class="popover-title">
-                                            Sleep & snoring aids
-                                        </h3>
-                                        <div class="popover-content"
-                                            style="background-image: url('images/category/category_8.jpg');">
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Ear plugs</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Asal strips</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                        </div>
-                                    </div>
-                                </li>
-                                <li data-submenu-id="submenu-9">
-                                    <a href="#">Stop smoking aids</a>
-                                    <div id="submenu-9" class="popover">
-                                        <h3 class="popover-title">
-                                            Stop smoking aids
-                                        </h3>
-                                        <div class="popover-content"
-                                            style="background-image: url('images/category/category_9.jpg');">
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Alternative therapies</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Nicotine gum</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                        </div>
-                                    </div>
-                                </li>
-                                <li data-submenu-id="submenu-10">
-                                    <a href="product_details.html">Condoms & pregnancy tests</a>
-                                    <div id="submenu-10" class="popover">
-                                        <h3 class="popover-title">
-                                            Condoms & pregnancy tests
-                                        </h3>
-                                        <div class="popover-content"
-                                            style="background-image: url('images/category/category_10.jpg');">
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Condoms & contraceptives</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Fertility tests</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                        </div>
-                                    </div>
-                                </li>
-                                <li data-submenu-id="submenu-11">
-                                    <a href="product_details.html">Supports & braces</a>
-                                    <div id="submenu-11" class="popover">
-                                        <h3 class="popover-title">
-                                            Supports & braces
-                                        </h3>
-                                        <div class="popover-content"
-                                            style="background-image: url('images/category/category_11.jpg');">
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Arm & elbow braces</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Back & waist</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                        </div>
-                                    </div>
-                                </li>
-                                <li data-submenu-id="submenu-12">
-                                    <a href="product_details.html">Children's healthcare</a>
-                                    <div id="submenu-12" class="popover">
-                                        <h3 class="popover-title">
-                                            Children's healthcare
-                                        </h3>
-                                        <div class="popover-content"
-                                            style="background-image: url('images/category/category_12.jpg');">
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Children's air care</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Children's allergy medicine</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="last" data-submenu-id="submenu-13">
-                                    <a href="product_details.html">Natural & homeopathic</a>
-                                    <div id="submenu-13" class="popover">
-                                        <h3 class="popover-title">
-                                            Natural & homeopathic
-                                        </h3>
-                                        <div class="popover-content"
-                                            style="background-image: url('images/category/category_13.jpg');">
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Homeopathic remedies</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                            <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                    href="product_details.html">Manuka honey products</a>
-                                            </strong>
-                                            </font>
-                                            <br />
-                                            <br />
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+                                <ul class="sidebar_list" role="menu">
+                                        <li class="first" data-submenu-id="submenu-1">
+                                            <a href="product_details.html">Pain Relief</a>
+                                            <div id="submenu-1" class="popover">
+                                                <h3 class="popover-title">Pain Relief</h3>
+                                                <div class="popover-content" style="background-image:url('images/category/category_1.jpg');">
+                                                    <br/>
+                                                    <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">General pain relief</a></strong></font><br/><br/>
+                                                    <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">Kids pain relief</a></strong></font><br/><br/>
+                                                    <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">Hot packs</a></strong></font><br/><br/>
+                                                               </div>
+                                            </div>
+                                        </li>
+                                        <li data-submenu-id="submenu-2">
+                                            <a href="product_details.html">Cold & Cough</a>
+                                            <div id="submenu-2" class="popover">
+                                                <h3 class="popover-title">Cold & Cough</h3>
+                                                <div class="popover-content" style="background-image:url('images/category/category_2.jpg');">
+                                                	<br/>
+                                                    <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">Nasal Care</a></strong></font><br/><br/>
+                                                    <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">Chest rubs</a></strong></font><br/><br/> 
+                                                    <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">Cough syrup</a></strong></font><br/><br/>
+                      
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li data-submenu-id="submenu-3">
+                                            <a href="product_details.html">Allergy</a>
+                                            <div id="submenu-3" class="popover">
+                                                <h3 class="popover-title">Allergy</h3>
+                                                <div class="popover-content" style="background-image:url('images/category/category_3.jpg');">
+                                                    <br/>
+                                                    <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">Ear care</a></strong></font><br/><br/>
+                                                    <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">Sinus medicine</a></strong></font><br/><br/>
+                                                    <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">Eye care</a></strong></font><br/><br/>
+                                                    <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">Asthma</a></strong></font><br/><br/>
 
+                                                	<font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">Nasal</a></strong></font><br/><br/>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li data-submenu-id="submenu-4">
+                                            <a href="product_details.html">Nausea</a>
+                                            <div id="submenu-4" class="popover">
+                                                <h3 class="popover-title">Nausea</h3>
+                                                <div class="popover-content" style="background-image:url('images/category/category_4.jpg');">
+                                                	<br/>
+                                                    <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">Antacids</a></strong></font><br/><br/>
+                                                    <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">Lactose Intolerance</a></strong></font><br/><br/>
+                                                    <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">Anti-diarrheals</a></strong></font><br/><br/>
+
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li data-submenu-id="submenu-6">
+                                            <a href="product_details.html">Skin Care</a>
+                                            <div id="submenu-6" class="popover">
+                                                <h3 class="popover-title">Skin Care</h3>
+                                                <div class="popover-content" style="background-image:url('images/category/category_6.jpg');">
+                                                	<br/>     	<font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">Psoriasis</a></strong></font><br/><br/>
+                                                	<font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">Cuts & wound</a></strong></font><br/><br/>
+                                                	<font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">Moisturiser</a></strong></font><br/><br/>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li data-submenu-id="submenu-7">
+                                            <a href="product_details.html">Diabetes & BP </a>
+                                            <div id="submenu-7" class="popover">
+                                                <h3 class="popover-title">Diabetes & BP</h3>
+                                                <div class="popover-content" style="background-image:url('images/category/category_7.jpg');">
+                                                	<br/>
+                                                    <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">Glucose Monitor</a></strong></font><br/><br/>
+                                                    <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">Blood Pressure test strips</a></strong></font><br/><br/>
+
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li data-submenu-id="submenu-8">
+                                            <a href="product_details.html">Sleep Aid</a>
+                                            <div id="submenu-8" class="popover">
+                                                <h3 class="popover-title">Sleep Aid</h3>
+                                                <div class="popover-content" style="background-image:url('images/category/category_8.jpg');">
+                                                	<br/>
+                                                    <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">Ear/Eye plugs</a></strong></font><br/><br/>
+                                                    <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">Sleeping Pills</a></strong></font><br/><br/>
+                                                </div>
+                                            </div>
+                                        </li>
+                                       
+                                        <li data-submenu-id="submenu-10">
+                                            <a href="product_details.html">Contraceptives</a>
+                                            <div id="submenu-10" class="popover">
+                                                <h3 class="popover-title">Contraceptives</h3>
+                                                <div class="popover-content" style="background-image:url('images/category/category_10.jpg');">
+                                                	<br/>
+                                                    <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">Contraceptives</a></strong></font><br/><br/>
+                                                    <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">Pregnancy tests</a></strong></font><br/><br/>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li   data-submenu-id="submenu-12">
+                                            <a href="product_details.html">Child Care</a>
+                                            <div id="submenu-12" class="popover">
+                                                <h3 class="popover-title">Child Care</h3>
+                                                <div class="popover-content" style="background-image:url('images/category/category_12.jpg');">
+                                                	<br/>
+                                                    <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">Child Skin care</a></strong></font><br/><br/>
+                                                    <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">Child allergy </a></strong></font><br/><br/>
+                                                </div>
+                                            </div>
+                                        </li>
+										
+										  <li data-submenu-id="submenu-13">
+                                            <a href="product_details.html">Antibiotics & Antiseptics</a>
+                                            <div id="submenu-13" class="popover">
+                                                <h3 class="popover-title">Antibiotics & Antiseptics</h3>
+                                                <div class="popover-content" style="background-image:url('images/category/category_12.jpg');">
+                                                	<br/>
+                                                    <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">Antibiotics</a></strong></font><br/><br/>
+                                                    <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">Antiseptics </a></strong></font><br/><br/>
+                                                </div>
+                                            </div>
+                                        </li>
+										
+										  <li   data-submenu-id="submenu-14">
+                                            <a href="product_details.html">Stop Smoking</a>
+                                            <div id="submenu-14" class="popover">
+                                                <h3 class="popover-title">Stop Smoking</h3>
+                                                <div class="popover-content" style="background-image:url('images/category/category_12.jpg');">
+                                                	<br/>
+                                                    <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">e-Cigars</a></strong></font><br/><br/>
+                                                    <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">Nicotine Gums</a></strong></font><br/><br/>
+                                                </div>
+                                            </div>
+                                        </li>
+										
+										  <li  data-submenu-id="submenu-15">
+                                            <a href="product_details.html">Sterile Gloves & Masks</a>
+                                            <div id="submenu-15" class="popover">
+                                                <h3 class="popover-title">Sterile Gloves & Masks</h3>
+                                                <div class="popover-content" style="background-image:url('images/category/category_12.jpg');">
+                                                	<br/>
+                                                    <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">Gloves</a></strong></font><br/><br/>
+                                                    <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">Masks</a></strong></font><br/><br/>
+                                                </div>
+                                            </div>
+                                        </li>
+										
+										
+										  <li data-submenu-id="submenu-16">
+                                            <a href="product_details.html">First Aid</a>
+                                            <div id="submenu-16" class="popover">
+                                                <h3 class="popover-title">First Aid</h3>
+                                                <div class="popover-content" style="background-image:url('images/category/category_12.jpg');">
+                                                	<br/>
+                                                    <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">Bandaid</a></strong></font><br/><br/>
+                                                    <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_details.html">Rubs & Liquids </a></strong></font><br/><br/>
+                                                </div>
+                                            </div>
+                                        </li>
+										
+										  <li class="last"  data-submenu-id="submenu-17">
+                                            <a href="product_details.html">Full Store Directory</a>
+                                            <div id="submenu-17" class="popover">
+                                                <h3 class="popover-title">Full Store Directory</h3>
+                                                <div class="popover-content" style="background-image:url('images/category/category_12.jpg');">
+                                                	<br/>
+                                                    <font size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="sitemap.html">Full Store</a></strong></font><br/><br/>
+
+                                                </div>
+                                            </div>
+                                        </li>
+                                       
+                                    </ul>
+                               
                         </div>
-                    </div>
-                </div>
-            </div>
-            <ul class="grid cs-style-2">
-                <section class="col-2"  style="left:40px;">
-                <iframe src="slider/demo/demo.html"
-                    style="width: 1103px; height: 475px; color: #429a67; border-width: 0px; border-color: #990033; border-style: solid;"
-                    scrolling="no">
-                </iframe>
-                </section>
-            </ul>
-            <!--center>
-                <a href="sitemap.html">Sitemap</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="help.html">Contact Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ©
-                2013-2020 UPMC Corp. All rights reserved.
-        </div-->
-        <!-- /container -->
-        <div  id="footerOfWebPages" align="center">
-            <a id="aFooterOfWebPages" href="#">Site map</a>|
-            <a id="aFooterOfWebPages" href="#">Terms of Use</a>|
-            <a id="aFooterOfWebPages" href="#">Privacy Policy</a>|
-            <a id="aFooterOfWebPages" href="#">Shipping Policy</a>|
-            <a id="aFooterOfWebPages" href="#">Return Policy</a>|
-            
-            <a id="aFooterOfWebPages" href="#">About us</a>|
-            <a id="aFooterOfWebPages" href="#">Contact us</a>|
+                    </div></div>
+</div>
+			
+			<ul class="grid cs-style-2">
+			
+				<iframe src="slider/demo/demo.html"
+style="width:1103px; height:475px;color:#429a67;
+border-width:0px;
+border-color:#990033; 
+border-style:solid;"
+scrolling="no" >
+</iframe>
+			</ul>
+	<center><a href="sitemap.html">Sitemap</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="help.html">Contact Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+© 2013-2020 UPMC Corp. All rights reserved.	</div><!-- /container -->
+		<script src="js/toucheffects.js"></script>
 
-            <a id="aFooterOfWebPages" href="#">Careers</a>
-
-            <p id="pFooterOfWebPages">Copyright © 2013 Team TechZen, All rights reserved.</p>
-
-
-           
-        </div>
-        <script src="js/toucheffects.js"></script>
-
-    </body>
+	</body>
 </html>

@@ -56,15 +56,19 @@ a { text-decoration:none }
 
 /* Login Button Text */
 #loginButton span {
+    color:#445058; 
     font-size:14px; 
     font-weight:bold; 
+    text-shadow:1px 1px #fff; 
     padding:7px 29px 9px 10px;
     background:url(../images/loginArrow.png) no-repeat 53px 7px;
     display:block
 }
 #loginButton1 span {
+    color:#445058; 
     font-size:14px; 
     font-weight:bold; 
+    text-shadow:1px 1px #fff; 
     padding:7px 29px 9px 10px;
     background:url(../images/loginArrow.png) no-repeat 63px 7px;
     display:block
@@ -231,11 +235,11 @@ fieldset#body1 {
     -moz-border-radius:3px;
     color:#3a454d;
     font-weight:bold;
-    padding:4px 4px;
+    padding:8px 8px;
     box-shadow:inset 0px 1px 3px #bbb;
     -webkit-box-shadow:inset 0px 1px 3px #bbb;
     -moz-box-shadow:inset 0px 1px 3px #bbb;
-    font-size:16px;
+    font-size:12px;
 }
 
 #loginForm1 input {
@@ -245,11 +249,11 @@ fieldset#body1 {
     -moz-border-radius:3px;
     color:#3a454d;
     font-weight:bold;
-    padding:4px 4px;
+    padding:8px 8px;
     box-shadow:inset 0px 1px 3px #bbb;
     -webkit-box-shadow:inset 0px 1px 3px #bbb;
     -moz-box-shadow:inset 0px 1px 3px #bbb;
-    font-size:16px;
+    font-size:12px;
 }
 
 /* Sign In Button */
@@ -258,13 +262,13 @@ fieldset#body1 {
     float:left;
     background:#339cdf url(../images/loginbuttonbg.png) repeat-x;
     color:#fff;
-    padding:4px 10px 4px 10px;
+    padding:7px 10px 8px 10px;
     text-shadow:0px -1px #278db8;
     border:1px solid #339cdf;
     box-shadow:none;
     -moz-box-shadow:none;
     -webkit-box-shadow:none;
-    margin:0 12px 10px 0;
+    margin:0 12px 0 0;
     cursor:pointer;
     *padding:7px 2px 8px 2px; /* IE7 Fix */
 }
@@ -274,13 +278,13 @@ fieldset#body1 {
     float:left;
     background:#339cdf url(../images/loginbuttonbg.png) repeat-x;
     color:#fff;
-    padding:4px 10px 4px 10px;
+    padding:7px 10px 8px 10px;
     text-shadow:0px -1px #278db8;
     border:1px solid #339cdf;
     box-shadow:none;
     -moz-box-shadow:none;
     -webkit-box-shadow:none;
-    margin:0 12px 10px 0;
+    margin:0 12px 0 0;
     cursor:pointer;
     *padding:7px 2px 8px 2px; /* IE7 Fix */
 }
@@ -299,7 +303,9 @@ fieldset#body1 {
 }
 
 #loginForm span a {
-    font-size:16px;
+    color:#3a454d;
+    text-shadow:1px 1px #fff;
+    font-size:12px;
 }
 
 #loginForm1 span a {
