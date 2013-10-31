@@ -14,7 +14,6 @@ body {
 }
 
 body {
-	background: #52be7f;
 	color: #fff;
 }
 
@@ -23,7 +22,7 @@ body {
 	margin-bottom: 3em;
 	height: 26em;
 	background: #94D6DF;
-	font-family: 'Lato', Arial, sans-serif;
+	font-family: 'Open Sans';
 
 	}
 
@@ -32,23 +31,23 @@ body {
 	margin-bottom: 3em;
 	height: 26em;
 	background:#F59A96;
-	font-family: 'Lato', Arial, sans-serif;
+	font-family: 'Open Sans';
 }
 
 .component_test1 {
 	position: relative;
 	margin-bottom: 3em;
 	height: 26em;
-	background: #F1C4BE;
-	font-family: 'Lato', Arial, sans-serif;
+	background: #F59A96;
+	font-family: 'Open Sans';
 }
 
 .component_test2 {
 	position: relative;
 	margin-bottom: 3em;
 	height: 26em;
-	background: #aaacb0;
-	font-family: 'Lato', Arial, sans-serif;
+	background: #94D6DF;
+	font-family: 'Open Sans';
 }
 
 
@@ -69,7 +68,7 @@ body {
 .cn-button {
 	position: absolute;
 	top: 50%;
-	left: 50%;
+	left: 46%;
 	z-index: 11;
 	margin-top: -2.25em;
 	margin-left: -2.25em;

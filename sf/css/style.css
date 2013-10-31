@@ -3,10 +3,9 @@
     padding:0px;
 }
 body{
-    color:#444444;
     font-size:13px;
     background: #f2f2f2;
-    font-family:"Century Gothic", Helvetica, sans-serif;
+    font-family:'Open Sans';
 }
 #content{
     margin:15px auto;
@@ -63,7 +62,7 @@ body{
     display:block;
     height:45px;
     background-color:#444;
-    color:#666;
+    color:#333;
     outline:none;
     font-family: 'Open Sans';
     font-size: 16px;
@@ -94,7 +93,7 @@ body{
 #navigation ul li a:hover,
 #navigation ul li.selected a{
     background:#d8d8d8;
-    color:#666;
+    color:black;
     text-shadow:1px 1px 1px #fff;
 }
 span.checked{
@@ -157,7 +156,6 @@ span.error{
     text-align:right;
     margin-right:15px;
     line-height:26px;
-    color:#666;
     font-weight:bold;
 }
 #steps form input:not([type=radio]),
